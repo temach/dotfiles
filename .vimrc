@@ -61,6 +61,12 @@
 " Vim, not vi. To use advanced features, put this at the start of .vimrc
 set nocompatible
 
+" Tell vim what locale we are in. Important!
+scriptencoding utf-8
+
+" set UTF-8 as standard encoding and en_US as standard language
+set encoding=utf-8
+
 " When opening new file vim will look for special commands in it and run them
 " We disable this ablity
 set nomodeline
@@ -132,7 +138,7 @@ set shiftround
 " show invisible characters
 " but only show tabs as '>·' and trailing whitespace as '·'
 set list
-set listchars=tab:>-,trail:·
+set listchars=tab:△\ ,trail:·
 
 " This is the way I like my quotation marks and various braces
 " What's cool is if you have :paste mode enabled, this expansions
@@ -192,9 +198,6 @@ set directory=~/.vim/swap,~/tmp,/var/tmp,/tmp
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
-
-" set UTF-8 as standard encoding and en_US as standard language
-set encoding=utf8
 
 " Use unix as the standard file type (for line endings and so on)
 " Will be tried in order (unix first)
@@ -266,8 +269,12 @@ map <C-l> <C-W>l
 
 
 " =================== INTERFACE ========================
-" Show status line (info about which file you are on)
+" Show status line (info about which file you are on) as 2 lines
 set laststatus=2
+
+" status line from
+" http://vim.wikia.com/wiki/Showing_the_ASCII_value_of_the_current_character
+set statusline=%<%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %P
 
 " Show where you are in the file, line and column and %
 set ruler

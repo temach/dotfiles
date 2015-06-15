@@ -1,0 +1,16 @@
+
+
+
+# this if for dot files repo
+# ignore everything 
+*
+
+# except these files
+!.vimrc
+!.vimperatorrc
+!.gdbinit
+!.bashrc
+!.bash_profile
+!.gitignore
+
+

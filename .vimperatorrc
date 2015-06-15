@@ -1,0 +1,17 @@
+"3.9 (created: 2015/02/15 15:49:05)
+
+nnoremap ; :
+nnoremap : ;
+nnoremap <C-e> 7<C-e>
+nnoremap <C-y> 7<C-y>
+nnoremap F f
+nnoremap f F
+noremap <C-e> 7<C-e>
+noremap <C-y> 7<C-y>
+set "editor=vim -f"
+set tabnumbers
+vnoremap <C-e> 7<C-e>
+vnoremap <C-y> 7<C-y>
+source! /Users/artem/.vimperatorrc.local
+
+" vim: set ft=vimperator:

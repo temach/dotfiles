@@ -103,17 +103,6 @@ if !exists(":DiffOrig")
           \ | wincmd p | diffthis
 endif
 
-"CleverTab - tab to autocomplete is we are on text OR to move indent
-" Does not matter if this returns <c-n> or <c-p> since they both cycle through
-" the list of suggestions (they just use different order/direction)
-function CleverTab()
-    if strpart( getline('.'), col('.')-2, 1) =~ '^\k$'
-        return "\<C-n>"
-    else
-        return "\<Tab>"
-    endif
-endfunction
-
 
 " =========================== EDITING =============================
 " EDITING setting have to be before FILE settings because file setting may change
@@ -386,14 +375,15 @@ nnoremap <CR> :noh<CR><CR>
 "Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" Hit F1 to write file to disk. <c-o> (CTRL + o) in insert mode temporary switches to
-" normal mode.
-noremap  <F1> :w<CR>
-inoremap <F1> <C-o>:w<CR>
-
 " press F7 to add semi-colon to end of line and return cursor to original
 " place.
 nnoremap <F7> $a;<Esc>
+
+" F3 copy to system clipboard AND F4 to paste from it "
+nnoremap <F3> "*y
+vnoremap <F3> "*y
+nnoremap <F4> "*p
+vnoremap <F4> "*p
 
 " Create blank newlines and stay in normal mode
 nnoremap <silent> zj o<Esc>
@@ -404,9 +394,8 @@ nnoremap <silent> zk O<Esc>
 vmap > >gv
 vmap < <gv
 
-
-" Allow CleverTab but only in insert mode
-inoremap <Tab> <C-R>=CleverTab()<CR>
+" make Y work similar to D or C (so yank from current to end
+nnoremap Y y$
 
 " copy filepath[:line[:col]] to clipboard
 " note: register '+' is the system clipboard

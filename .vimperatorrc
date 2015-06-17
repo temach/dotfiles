@@ -1,17 +1,30 @@
-"3.9 (created: 2015/02/15 15:49:05)
+" notes:
+" see jumplist with jl "
+"
 
+" speed up "
 nnoremap ; :
 nnoremap : ;
-nnoremap <C-e> 7<C-e>
-nnoremap <C-y> 7<C-y>
+
+" allow usual copy/paste"
+noremap <C-c> <C-v><C-c>
+noremap <C-v> <C-v><C-v>
+
+" follow hints in new tab by default "
 nnoremap F f
 nnoremap f F
-noremap <C-e> 7<C-e>
-noremap <C-y> 7<C-y>
-set "editor=vim -f"
-set tabnumbers
-vnoremap <C-e> 7<C-e>
-vnoremap <C-y> 7<C-y>
-source! /Users/artem/.vimperatorrc.local
 
-" vim: set ft=vimperator:
+" you can use 'gt X' to change to tab number X "
+set tabnumbers
+
+" press <F4> to toggle search highlight"
+nnoremap <F4> :noh<CR><CR>
+
+" use <C-i> to edit text field in vim "
+set "editor=urxvt -e vim"
+
+"<C-e> and <C-y> scroll the viewport a single line. Make them faster.
+nnoremap <C-e> 8j
+nnoremap <C-y> 8k
+
+

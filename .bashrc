@@ -34,10 +34,10 @@ HISTSIZE=10000
 HISTFILESIZE=20000
 
 # A colon-separated list of patterns used to decide which command lines should be saved on the history list. Prefix matching is used. 
-export HISTIGNORE="&:pwd:ls:ls -l:ls -la:cd /:cd ..:history:h:ll" 
+export HISTIGNORE="&:pwd:ls:ls -l:ls -la:cd /:cd -:cd ..:history:h:ll" 
 
-# Write a timestamp in front of every command. [ %d-Day | %m-Month | %y-Year | %T-Time ]
-export HISTTIMEFORMAT="%y/%m/%d  "
+# Write a timestamp in front of every command. See "man strftime" 
+export HISTTIMEFORMAT="%F "
 
 # default colors="exfxcxdxbxegedabagacad", do "man ls" for info. blue=dirs, brown/yellow=sym link, cyan/sky blue = any weird file
 # export LSCOLORS="exdxFxFxxxFxFxFxFxFxFx"

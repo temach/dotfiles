@@ -12,5 +12,8 @@
 !.bashrc
 !.bash_profile
 !.gitignore
-
+!.Xdefaults
+!.bashrc_aliases
+!.inputrc
+!.xbindkeysrc.scm
 

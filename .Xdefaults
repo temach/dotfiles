@@ -1,0 +1,8 @@
+! -- Fonts for URXVT terminal -- !
+URxvt*font:                     xft:Menlo Regular:size=11
+URxvt.scrollBar:                false
+URxvt.background:               Black
+URxvt.foreground:               Yellow
+
+
+

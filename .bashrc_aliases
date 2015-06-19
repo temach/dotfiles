@@ -1,0 +1,56 @@
+# This is a custom file for aliases used in bash
+#   it is separate from .bashrc so that vim can source from it
+#   then we are able to use aliases in vim's prompt
+
+# this is on by default but force it for safety
+shopt -s expand_aliases
+
+
+# enable color support of ls and also add handy aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Use perl regex
+# perl -p -i -e '<regex>' <file or files>
+alias perlpie='perl -p -i -e '
+
+# open current dir in nautilus
+alias no='nautilus .'
+
+# diff default options, I use only this options 95% of time.
+alias mydiff='diff --side-by-side --suppress-common-lines'
+
+# allow quick color tagging for files
+alias tago="${HOME}/change_icon.sh orange"
+alias tagf="${HOME}/change_icon.sh firebrick2"
+alias tagb="${HOME}/change_icon.sh RoyalBlue1"
+alias tagg="${HOME}/change_icon.sh green2"
+alias tagy="${HOME}/change_icon.sh GreenYellow"
+
+#  forces man to display not just the first page that matches, but all matching pages. So man looks through all sections 1-8.
+alias man="man -a"
+
+# forse mv to always be verbose
+alias mv="mv -v"
+
+# This will force it to prompt before overriding colliding files.
+alias cp="cp -i"
+
+# extended ls command, 
+alias ll="ls -iHpAGlogF"
+
+# saves time so we don't type history 300 every time, 
+alias h="history 300"
+
+# to execute C code on the fly with a "here document"
+go_libs="-lm -lc"
+go_flags="-g -std=c11 -Og -Wall -Wextra -pedantic -include string.h -include stdio.h -include stdlib.h -include math.h -include stdbool.h"
+alias go_c="gcc -xc '-' $go_libs $go_flags"
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+

@@ -1,0 +1,7 @@
+# Normally you have to hit ctrl-P or ctrl-N to search through history
+# with a regex. Now this is default
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+

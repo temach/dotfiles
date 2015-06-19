@@ -71,12 +71,6 @@ set encoding=utf-8
 " We disable this ablity
 set nomodeline
 
-" Sets how many lines of history VIM has to remember (default is 20)
-set history=300
-
-" Number of undo levels
-set undolevels=400
-
 " Disable showmarks plugin
 let showmarks_enable=0
 
@@ -107,6 +101,12 @@ endif
 " =========================== EDITING =============================
 " EDITING setting have to be before FILE settings because file setting may change
 " values for tab expansion (if its a Makefile for example)
+
+" Sets how many lines of history VIM has to remember (default is 20)
+set history=300
+
+" Number of undo levels
+set undolevels=400
 
 " Spaces are better than a tab character
 set expandtab

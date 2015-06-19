@@ -9,11 +9,12 @@
 
 
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+#case $- in
+#    *i*) ;;
+#      *) return;;
+#esac
 
+export BASH_ENV="$HOME/.bashrc_aliases"
 
 
 

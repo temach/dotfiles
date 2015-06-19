@@ -8,6 +8,15 @@ set prompt \001\033[1;36m\002 gdb>\001\033[0m\002\040
 # Print big structs nicely, think pprint in python
 set print pretty
 
+# Stop this:  --Type return to continue bla-bla-bla
+set height 0
+
+# Print as much as there is to print (for arrays and strings)
+set print elements -1
+
+# Print many, many lines of context when I say "gdb>list"
+set linesize 28
+
 
 define phead
     set $ptr = $arg1

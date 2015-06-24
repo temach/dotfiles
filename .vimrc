@@ -258,6 +258,9 @@ map <C-l> <C-W>l
 
 
 " =================== INTERFACE ========================
+" Allow modified buffers to be hidden
+set hidden
+
 " Show status line (info about which file you are on) as 2 lines
 set laststatus=2
 

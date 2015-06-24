@@ -110,18 +110,6 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 
-## FUNCTIONS
-# Compress the cd, ls -l series of commands.
-function cl () {
-   if [ $# = 0 ]; then
-      cd && ll
-   else
-      cd "$*" && ll
-   fi
-}
-
-
-
 ## OTHER STUFF
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -145,3 +133,14 @@ fi
 if [ -f "$HOME/.bashrc_aliases" ]; then
     source "$HOME/.bashrc_aliases"
 fi
+
+
+## FUNCTIONS
+# Compress the cd, ls -l series of commands.
+function cl () {
+   if [ $# = 0 ]; then
+      cd && ll
+   else
+      cd "$*" && ll
+   fi
+}

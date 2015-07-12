@@ -31,7 +31,7 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
 # So we can locate optional packages with pkg-config
-export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PKG_CONFIG_PATH="/Library/Frameworks/Mono.framework/Versions/4.0.1/lib/pkgconfig:/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 ##### PROGRAMMING IN C  ####
 # compile source given full path to the file

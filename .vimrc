@@ -356,10 +356,8 @@ let mapleader = ","
 " Enter :sss to toggle and untoggle spell checking
 " SetupCommandAlias('sss', 'setlocal spell!')
 
-" Swap ; and :  Convenient. Also allow space to enter last-line mode.
+" Allow space to enter last-line mode.
 nnoremap <Space> :
-nnoremap ; :
-nnoremap : ;
 
 " This is totally awesome - remap jj to escape in insert mode.
 " You'll never type jj anyway, so it's great!

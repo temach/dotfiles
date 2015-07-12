@@ -146,7 +146,7 @@ function cl () {
 }
 
 # C# development (c-sharp)
-function runcs () {
+function run-c-sharp () {
    if [ $# = 0 ]; then
       echo "give me input"
    else

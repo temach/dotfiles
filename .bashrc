@@ -144,3 +144,15 @@ function cl () {
       cd "$*" && ll
    fi
 }
+
+# C# development (c-sharp)
+function run-c-sharp () {
+   if [ $# = 0 ]; then
+      echo "give me input"
+   else
+        namefull="$*"
+        namecut=$(basename "${namefull%.*}")
+        echo $fn
+        mcs "$*" -pkg:dotnet && mono ${namecut}".exe"
+   fi
+}

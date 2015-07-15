@@ -23,8 +23,12 @@ nnoremap <F4> :noh<CR><CR>
 " use <C-i> to edit text field in vim "
 set "editor=urxvt -e vim"
 
+" make normal scrolling faster "
+nnoremap j 6j
+nnoremap k 6k
+
 "<C-e> and <C-y> scroll the viewport a single line. Make them faster.
-nnoremap <C-e> 8j
-nnoremap <C-y> 8k
+nnoremap <C-e> 9j
+nnoremap <C-y> 9k
 
 

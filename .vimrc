@@ -354,13 +354,14 @@ highlight Normal ctermfg=grey ctermbg=black
 " ===================== ALIASES AND SHORTCUTS =======================
 " This is your own personal modifier key, as 'g' is Vim’s modifier key "
 " Default leader is '\'
-let mapleader = ","
+let mapleader = "\\"
 
 " Enter :sss to toggle and untoggle spell checking
 " SetupCommandAlias('sss', 'setlocal spell!')
 
 " Allow space to enter last-line mode.
 nnoremap <Space> :
+vnoremap <Space> :
 
 " This is totally awesome - remap jj to escape in insert mode.
 " You'll never type jj anyway, so it's great!
@@ -392,10 +393,10 @@ nnoremap <silent> zk O<Esc>
 
 " After selecting something in visual mode and shifting, I still want that"
 " selection intact  So don't exit visual mode after shifting.
-vmap > >gv
-vmap < <gv
+"vmap > >gv
+"vmap < <gv
 
-" make Y work similar to D or C (so yank from current to end
+" make Y work similar to D or C (so yank from current position to end)
 nnoremap Y y$
 
 " copy filepath[:line[:col]] to clipboard

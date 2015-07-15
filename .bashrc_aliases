@@ -39,7 +39,7 @@ alias mv="mv -v"
 alias cp="cp -i"
 
 # extended ls command, 
-alias ll="ls -iHpAGlogF"
+alias ll="ls -iHhAlF"  # add -Gg options to remove group and owner info
 
 # saves time so we don't type history 300 every time, 
 alias h="history 300"

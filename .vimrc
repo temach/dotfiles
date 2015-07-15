@@ -238,7 +238,7 @@ set backspace=eol,start,indent
 " previous/next line. Vim allows you to chose which commands will -wrap- the
 " cursor around the line borders. Here I allow the cursor left/right keys and
 " dis-allow using 'h','l' keys. Then h,l can only move within the line.
-set whichwrap=<,>
+set whichwrap=<Left>,<Right>
 
 " Moving lines and blocks up and down in normal/insert/visual modes
 " note: this maps to ALT + motion key
@@ -355,6 +355,11 @@ highlight Normal ctermfg=grey ctermbg=black
 " This is your own personal modifier key, as 'g' is Vim’s modifier key "
 " Default leader is '\'
 let mapleader = "\\"
+
+" Set <C-p> and <C-n> to cycle through history intelligently 
+" when in Ex command-line mode
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
 " Enter :sss to toggle and untoggle spell checking
 " SetupCommandAlias('sss', 'setlocal spell!')

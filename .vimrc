@@ -256,6 +256,13 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Remap buffer motion to be easier. This is in accordance with vim-unimpaired
+" plugin
+nnoremap <silent> [b :bprevious<CR> 
+nnoremap <silent> ]b :bnext<CR> 
+nnoremap <silent> [B :bfirst<CR> 
+nnoremap <silent> ]B :blast<CR>
+
 
 " =================== INTERFACE ========================
 " Allow modified buffers to be hidden

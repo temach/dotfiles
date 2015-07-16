@@ -238,7 +238,7 @@ set backspace=eol,start,indent
 " previous/next line. Vim allows you to chose which commands will -wrap- the
 " cursor around the line borders. Here I allow the cursor left/right keys and
 " dis-allow using 'h','l' keys. Then h,l can only move within the line.
-set whichwrap=<Left>,<Right>
+set whichwrap=
 
 " Moving lines and blocks up and down in normal/insert/visual modes
 " note: this maps to ALT + motion key

@@ -127,7 +127,7 @@ set shiftround
 " show invisible characters
 " but only show tabs as '>·' and trailing whitespace as '·'
 set list
-set listchars=tab:△\ ,trail:·
+set listchars=tab:>\ ,trail:·
 
 " This is the way I like my quotation marks and various braces
 " What's cool is if you have :paste mode enabled, this expansions

@@ -7,6 +7,7 @@ shopt -s expand_aliases
 
 
 # enable color support of ls and also add handy aliases
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -38,7 +39,7 @@ alias mv="mv -v"
 alias cp="cp -i"
 
 # extended ls command, 
-alias ll="ls -iHpAGlogF"
+alias ll="ls -iHhAlF"  # add -Gg options to remove group and owner info
 
 # saves time so we don't type history 300 every time, 
 alias h="history 300"

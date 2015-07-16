@@ -3,12 +3,11 @@
 "
 
 " speed up "
-nnoremap ; :
-nnoremap : ;
+nnoremap \ :
 
 " allow usual copy/paste"
-noremap <C-c> <C-v><C-c>
-noremap <C-v> <C-v><C-v>
+nnoremap <C-c> <C-v><C-c>
+nnoremap <C-v> <C-v><C-v>
 
 " follow hints in new tab by default "
 nnoremap F f
@@ -24,11 +23,11 @@ nnoremap <F4> :noh<CR><CR>
 set "editor=urxvt -e vim"
 
 " make normal scrolling faster "
-nnoremap j 6j
-nnoremap k 6k
+nnoremap j 7j
+nnoremap k 7k
 
 "<C-e> and <C-y> scroll the viewport a single line. Make them faster.
-nnoremap <C-e> 9j
-nnoremap <C-y> 9k
+nnoremap <C-e> 10j
+nnoremap <C-y> 10k
 
 

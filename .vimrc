@@ -102,6 +102,10 @@ endif
 " EDITING setting have to be before FILE settings because file setting may change
 " values for tab expansion (if its a Makefile for example)
 
+" Allow using the matchit plugin, this is a default plugin "
+" see :h matchit-install for more info "
+runtime macros/matchit.vim
+
 " Sets how many lines of history VIM has to remember (default is 20)
 set history=300
 
@@ -138,6 +142,10 @@ inoremap ( ()<Left>
 " inoremap < <><Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
+
+" Allow bash/tchs shell like editing of text when in insert mode "
+inoremap <C-e> <C-o>A
+inoremap <C-a> <C-o>I
 
 " Add a bit extra margin to the left for folded code
 " set foldcolumn=6
@@ -188,9 +196,18 @@ set directory=~/.vim/swap,~/tmp,/var/tmp,/tmp
 filetype plugin on
 filetype indent on
 
+" Allow using the matchit plugin, this is a default plugin "
+" see :h matchit-install for more info (has to go after
+" 'filetype plugin on' line)"
+runtime macros/matchit.vim
+
 " Use unix as the standard file type (for line endings and so on)
 " Will be tried in order (unix first)
 set ffs=unix,mac,dos
+
+" Allow using gf command to better find and open files"
+" Also you might consider changing the 'path' value. (see :h path)"
+set suffixesadd+=.c,.rb,.py,.h,.cpp,.cxx,.awk,.sh
 
 " When editing a file, always jump to the last cursor position
 if has("autocmd")
@@ -228,6 +245,7 @@ augroup END
 " =============== MOVEMENT =========================
 set scrolloff=7               " keep at least 5 lines above/below cursor
 set sidescrolloff=7           " keep at least 5 lines left/right cursor
+set sidescroll=1              " minimum number lines to scroll horizontally
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -363,10 +381,14 @@ highlight Normal ctermfg=grey ctermbg=black
 " Default leader is '\'
 let mapleader = "\\"
 
-" Set <C-p> and <C-n> to cycle through history intelligently 
+" Set <C-p> and <C-n> to cycle through history intelligently
 " when in Ex command-line mode
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+" Allow bash/tcsh style editing when in Command-line-mode "
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
 
 " Enter :sss to toggle and untoggle spell checking
 " SetupCommandAlias('sss', 'setlocal spell!')
@@ -374,6 +396,12 @@ cnoremap <C-n> <Down>
 " Allow space to enter last-line mode.
 nnoremap <Space> :
 vnoremap <Space> :
+
+" Swap mark jumps "
+nnoremap ' `
+vnoremap ' `
+nnoremap ` '
+vnoremap ` '
 
 " This is totally awesome - remap jj to escape in insert mode.
 " You'll never type jj anyway, so it's great!

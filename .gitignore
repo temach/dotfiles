@@ -11,6 +11,7 @@
 !.gdbinit
 !.bashrc
 !.bash_profile
+!.bash_common
 !.gitignore
 !.Xdefaults
 !.bashrc_aliases

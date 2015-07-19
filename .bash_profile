@@ -119,7 +119,7 @@ alias go_c="gcc -xc '-' $go_libs $go_flags"
 
 
 # go read the .bashrc_common file
-if [ -f "$HOME/.bashrc_common" ]; then
-    source "$HOME/.bashrc_common"
+if [ -f "$HOME/.bash_common" ]; then
+    source "$HOME/.bash_common"
 fi
 

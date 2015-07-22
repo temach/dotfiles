@@ -1,22 +1,20 @@
+# bash setting for ue in FreeBSD and derivatives (MacOSX)
 
-# go read the bashrc file
-if [ -f "$HOME/.bashrc" ]; then
-    source "$HOME/.bashrc"
-fi
-
+# tell FreeBSD (and MacOSX) that we want color
+export CLICOLOR=1
 
 #### APPLE SPECIFIC ####
 # alias for the wonderful airport utility, by apple
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 
 # alias, use this when travelling long distance and computer has to sleep. Almost the same as power off. (read the "pmset" man page)
-alias enter_hibernation="sudo pmset sleep 20 hibernatemode 25;"        	
+alias enter_hibernation="sudo pmset sleep 20 hibernatemode 25;"
 alias exit_hibernation="sudo pmset sleep 4 hibernatemode 3;"
 
 
 #### PACKAGES AND TOOLS ####
-# I already have the basic PostgreSQL tools available on the codline 
-# (like createdb) but this path also brings "PROJ.4", "GDAL" and "PostGIS" tools. 
+# I already have the basic PostgreSQL tools available on the codline
+# (like createdb) but this path also brings "PROJ.4", "GDAL" and "PostGIS" tools.
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:${PATH}"
 
 # For cmake, cmake-gui (recommended), ccmake, and a few other cmake things.
@@ -54,7 +52,6 @@ export OPENGL_DEV_LIBS="$GLFW3_LIBS $GLEW_SETTINGS $PQ_SETTINGS -lm"
 
 # "-m" specify target arch bitness -m32 or -m64
 # -Weverything is only for clang on mac
-
 export C_STD_FLAG="-std=c11"
 
 export CLANG_FLAGS="-O0 $C_STD_FLAG -pedantic -Wall -Wextra -Weverything"
@@ -74,7 +71,7 @@ export GCC_FLAGS="-v $C_STD_FLAG -pedantic -Wextra -Wall -W -Wdeclaration-after-
             	-Wmissing-include-dirs -Wmissing-noreturn \
             	-Wpacked -Wparentheses \
             	-Wredundant-decls -Wreturn-type \
-        	-Wsequence-point -Wsign-compare  -Wstack-protector \
+            	-Wsequence-point -Wsign-compare  -Wstack-protector \
             	-Wstrict-aliasing=1 -Wswitch \
             	-Wswitch-enum -Wtrigraphs  -Wuninitialized \
             	-Wunknown-pragmas  -Wunreachable-code -Wunused \
@@ -106,4 +103,23 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+########## MORE ALIASES ##########
+# this is on by default but force it for safety
+shopt -s expand_aliases
+
+# extended ls command,
+# note: in FreeBSD -G adds color
+alias ll="ls -iHhAlFG"
+
+# to execute C code on the fly with a "here document"
+go_libs="-lm -lc"
+go_flags="-g -std=c11 -Og -Wall -Wextra -pedantic -include string.h -include stdio.h -include stdlib.h -include math.h -include stdbool.h"
+alias go_c="gcc -xc '-' $go_libs $go_flags"
+
+
+
+# go read the .bashrc_common file
+if [ -f "$HOME/.bash_common" ]; then
+    source "$HOME/.bash_common"
+fi
 

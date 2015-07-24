@@ -104,9 +104,6 @@ alias egrep='egrep --color=auto'
 # perl -p -i -e '<regex>' <file or files>
 alias perlpie='perl -p -i -e '
 
-# open current dir in nautilus
-alias op='open .'
-
 # diff default options, I use only this options 95% of time.
 alias mydiff='diff --side-by-side --suppress-common-lines'
 

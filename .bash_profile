@@ -116,6 +116,8 @@ go_libs="-lm -lc"
 go_flags="-g -std=c11 -Og -Wall -Wextra -pedantic -include string.h -include stdio.h -include stdlib.h -include math.h -include stdbool.h"
 alias go_c="gcc -xc '-' $go_libs $go_flags"
 
+# open current dir in finder
+alias op='open .'
 
 
 # go read the .bashrc_common file

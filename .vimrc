@@ -468,6 +468,22 @@ vnoremap <C-y> 5<C-y>
 "You can tell you are in paste mode when the ruler is not visible
 set pastetoggle=<F2>
 
+" vsearch.vim
+" Visual mode search from https://github.com/godlygeek/vim-files/blob/master/plugin/vsearch.vim
+" Make * and # search for whole selected text when in visual mode"
+function! s:VSetSearch()
+  let temp = @@
+  norm! gvy
+  let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
+  " Use this line instead of the above to match matches spanning across lines
+  "let @/ = '\V' . substitute(escape(@@, '\'), '\_s\+', '\\_s\\+', 'g')
+  call histadd('/', substitute(@/, '[?/]', '\="\\%d".char2nr(submatch(0))', 'g'))
+  let @@ = temp
+endfunction
+
+vnoremap * :<C-u>call <SID>VSetSearch()<CR>/<CR>
+vnoremap # :<C-u>call <SID>VSetSearch()<CR>?<CR>
+
 " Load local settings if they exist.
 if filereadable($HOME . "/.vimrc.local")
     source ~/.vimrc.local

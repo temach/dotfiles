@@ -181,6 +181,11 @@ set wildignore=*.o,*~,*.pyc,*/.DS_Store,*/.git/*,*/.svn/*,*/.hg/*
 " Lookup ctags -tags- file up in the directory until one is found
 set tags=tags;/
 
+" Generate a new ctags file every time a buffer is saved "
+if has("autocmd")
+    autocmd BufWritePost * call system("ctags -R --exclude=.git")
+endif
+
 " New awesome stuff: Persistent Undo!
 set undofile                " Save undo's after file closes
 set undodir=~/.vim/undo/    " where to save undo histories

@@ -157,7 +157,9 @@ endif
 
 " do lots of scanning on tab completion,
 " consider adding '+= k' to scan in dictionary
-set complete=.,w,b,u,U,t,i,d
+" default: .,w,b,u,t,i
+" currently: tags file, included files, included files macros
+set complete=],i,d
 
 " tilde is the toggle case operator
 " Now '~' will be same as 'g~'

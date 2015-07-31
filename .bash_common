@@ -119,6 +119,10 @@ alias cp="cp -i"
 # saves time so we don't type history 300 every time,
 alias h="history 300"
 
+# saves time so we don't have to filter with head and tail all the time
+# alias hf="history 300"
+# actually just use: "fc -l START END" 
+
 ######### FUNCTIONS ##############
 # Compress the cd, ls -l series of commands.
 function cl () {

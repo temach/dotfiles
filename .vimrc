@@ -184,8 +184,10 @@ set wildignore=*.o,*~,*.pyc,*/.DS_Store,*/.git/*,*/.svn/*,*/.hg/*
 set tags=tags;/
 
 " Generate a new ctags file every time a buffer is saved "
+" To run ctags recursively use -R flag but this WILL take a while and freeze
+" vim. Right now this will only act on files in current dir.
 if has("autocmd")
-    autocmd BufWritePost * call system("ctags -R --exclude=.git")
+    autocmd BufWritePost *.c, *.h, *.cpp, *.hpp, *.py call system("ctags * --exclude=.git")
 endif
 
 " New awesome stuff: Persistent Undo!

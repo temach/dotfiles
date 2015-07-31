@@ -12,7 +12,7 @@
 ########## SHELL TWEAKS ###########
 
 ## ENV VARIABLES
-# set default editor. Better set both, VISUAL and EDITOR. 
+# set default editor. Better set both, VISUAL and EDITOR.
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
@@ -24,10 +24,10 @@ HISTCONTROL=ignoreboth
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-# A colon-separated list of patterns used to decide which command lines should be saved on the history list. Prefix matching is used. 
-export HISTIGNORE="&:pwd:ls:ls -l:ls -la:cd /:cd -:cd ..:history:h:ll" 
+# A colon-separated list of patterns used to decide which command lines should be saved on the history list. Prefix matching is used.
+export HISTIGNORE="&:pwd:ls:ls -l:ls -la:cd /:cd -:cd ..:history:h:ll"
 
-# Write a timestamp in front of every command. See "man strftime" 
+# Write a timestamp in front of every command. See "man strftime"
 export HISTTIMEFORMAT="%F "
 
 # runtime paths manipulations
@@ -55,7 +55,10 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
-
+# Disable software flow control. This is a legacy feature.
+# see for more info: http://catern.com/posts/terminal_quirks.html
+stty -ixon
+stty -ixoff
 
 ## ALLOW COLORS
 # Tell everybody that we use full color
@@ -121,7 +124,7 @@ alias h="history 300"
 
 # saves time so we don't have to filter with head and tail all the time
 # alias hf="history 300"
-# actually just use: "fc -l START END" 
+# actually just use: "fc -l START END"
 
 ######### FUNCTIONS ##############
 # Compress the cd, ls -l series of commands.

@@ -157,7 +157,9 @@ endif
 
 " do lots of scanning on tab completion,
 " consider adding '+= k' to scan in dictionary
-set complete=.,w,b,u,U,t,i,d
+" default: .,w,b,u,t,i
+" currently: tags file, included files, included files macros
+set complete=],i,d
 
 " tilde is the toggle case operator
 " Now '~' will be same as 'g~'
@@ -180,6 +182,11 @@ set wildignore=*.o,*~,*.pyc,*/.DS_Store,*/.git/*,*/.svn/*,*/.hg/*
 
 " Lookup ctags -tags- file up in the directory until one is found
 set tags=tags;/
+
+" Generate a new ctags file every time a buffer is saved "
+if has("autocmd")
+    autocmd BufWritePost * call system("ctags -R --exclude=.git")
+endif
 
 " New awesome stuff: Persistent Undo!
 set undofile                " Save undo's after file closes
@@ -232,13 +239,17 @@ set viminfo+=h
 set viminfo+=n~/.viminfo
 
 " Configure tabs for various file types. No change tabs to spaces in Makefiles
-autocmd FileType make setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+if has("autocmd")
+    autocmd FileType make setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+endif
 
 "Ensure vim is not recursively invoked (man-db does this)
 "when doing ctrl-[ on a man page reference
 augroup man
-    autocmd!
-    autocmd FileType man let $MANPAGER=""
+    if has("autocmd")
+        autocmd!
+        autocmd FileType man let $MANPAGER=""
+    endif
 augroup END
 
 
@@ -276,9 +287,9 @@ map <C-l> <C-W>l
 
 " Remap buffer motion to be easier. This is in accordance with vim-unimpaired
 " plugin
-nnoremap <silent> [b :bprevious<CR> 
-nnoremap <silent> ]b :bnext<CR> 
-nnoremap <silent> [B :bfirst<CR> 
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
 
@@ -389,6 +400,10 @@ cnoremap <C-n> <Down>
 " Allow bash/tcsh style editing when in Command-line-mode "
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+
+" The repeat substitute command will not discard previous flags"
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
 
 " Enter :sss to toggle and untoggle spell checking
 " SetupCommandAlias('sss', 'setlocal spell!')

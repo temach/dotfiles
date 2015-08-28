@@ -116,6 +116,9 @@ set undolevels=400
 set expandtab
 set smarttab
 
+" Alllow virtual edit for easier selection in visual mode"
+set virtualedit=block
+
 " Who wants an 8 character tab?  Not me!
 set shiftwidth=4
 set softtabstop=4
@@ -187,7 +190,11 @@ set tags=tags;/
 " To run ctags recursively use -R flag but this WILL take a while and freeze
 " vim. Right now this will only act on files in current dir.
 if has("autocmd")
-    autocmd BufWritePost *.c, *.h, *.cpp, *.hpp, *.py call system("ctags * --exclude=.git")
+    autocmd BufWritePost *.c call system("ctags * --exclude=.git")
+    autocmd BufWritePost *.h call system("ctags * --exclude=.git")
+    autocmd BufWritePost *.cpp call system("ctags * --exclude=.git")
+    autocmd BufWritePost *.hpp call system("ctags * --exclude=.git")
+    autocmd BufWritePost *.py call system("ctags * --exclude=.git")
 endif
 
 " New awesome stuff: Persistent Undo!

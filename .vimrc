@@ -158,11 +158,11 @@ if has('mouse')
     set mouse=a
 endif
 
-" do lots of scanning on tab completion,
+" do lots of scanning on completion,
 " consider adding '+= k' to scan in dictionary
 " default: .,w,b,u,t,i
-" currently: tags file, included files, included files macros
-set complete=],i,d
+" currently: tags file, included files, included files macros, current buffer
+set complete=],i,d,.
 
 " tilde is the toggle case operator
 " Now '~' will be same as 'g~'

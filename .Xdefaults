@@ -21,7 +21,7 @@ URxvt.letterSpace:          -2
 !URxvt.modifier: super
 
 !! perl extensions
-URxvt.perl-ext:             default,url-select,clipboard
+! URxvt.perl-ext:             default,url-select,clipboard
 
 ! url-select (part of urxvt-perls package)
 ! URxvt.keysym.M-u:           perl:url-select:select_next
@@ -31,14 +31,14 @@ URxvt.perl-ext:             default,url-select,clipboard
 ! URxvt.url-select.underline: true
 
 ! Nastavuje kopirovani (real copy/paste!)
-URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
-URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+! URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+! URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
 
 ! Font size on the fly
-URxvt.keysym.C-Up:     perl:font-size:increase
-URxvt.keysym.C-Down:   perl:font-size:decrease
-URxvt.keysym.C-S-Up:   perl:font-size:incglobal
-URxvt.keysym.C-S-Down: perl:font-size:decglobal
+! URxvt.keysym.C-Up:     perl:font-size:increase
+! URxvt.keysym.C-Down:   perl:font-size:decrease
+! URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+! URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
 ! disable the stupid ctrl+shift 'feature'
 URxvt.iso14755:             false

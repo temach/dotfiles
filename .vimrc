@@ -75,7 +75,7 @@ set nomodeline
 let showmarks_enable=0
 
 " Start pathogen plugin
-execute pathogen#infect()
+" execute pathogen#infect()
 
 
 

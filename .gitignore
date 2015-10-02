@@ -17,5 +17,6 @@
 !.bashrc_aliases
 !.inputrc
 !.xbindkeysrc.scm
+!.xinitrc
 !.gitignore_global
 

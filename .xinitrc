@@ -42,6 +42,16 @@ fi
 # start some nice programs
 setxkbmap -option 'caps:escape'
 
+# set dwm title bar
+# Statusbar loop
+while true ; do
+   xsetroot -name "$(acpi -b) | Time $(date +"%F %R" )"
+   sleep 1s    # Update every minute
+done &
+
+# auto launch firefox in the background
+firefox &
+
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
   [ -x "$f" ] && . "$f"

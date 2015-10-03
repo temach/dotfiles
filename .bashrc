@@ -9,5 +9,5 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # aloas to rebuild dwm (dynamic window manager)
-alias redwm='cd ~/temach-arch-linux/dwm-git-source ; updpkgsums; makepkg -efi --noconfirm; killall dwm'
+alias redwm='cd  $HOME/temach-arch-linux/dwm-abs-build-dir; updpkgsums; makepkg -efi --noconfirm; killall dwm'
 

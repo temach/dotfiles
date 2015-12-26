@@ -2,6 +2,9 @@
 " see jumplist with jl "
 "
 
+" mapleader "
+let mapleader = ","
+
 " speed up "
 nnoremap \ :
 
@@ -14,10 +17,10 @@ nnoremap F f
 nnoremap f F
 
 " you can use 'gt X' to change to tab number X "
-set tabnumbers
+" set tabnumbers
 
 " press <F4> to toggle search highlight"
-nnoremap <F4> :noh<CR><CR>
+nnoremap <Leader>, :noh<CR><CR>
 
 " use <C-i> to edit text field in vim "
 set "editor=urxvt -e vim"
@@ -32,4 +35,15 @@ nnoremap h 2h
 nnoremap <C-e> 10j
 nnoremap <C-y> 10k
 
+" hide gui except for tabs"
+set gui=none,tabs
+
+" set default search to duckduckgo "
+set defsearch=duckduckgo
+
+" show big gui"
+nnoremap <Leader>b ":set gui=all<CR>"
+
+" show small gui "
+nnoremap <Leader>s ":set gui=none,tabs<CR>"
 

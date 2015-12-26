@@ -75,7 +75,7 @@ set nomodeline
 let showmarks_enable=0
 
 " Start pathogen plugin
-" execute pathogen#infect()
+execute pathogen#infect()
 
 
 
@@ -173,6 +173,9 @@ if v:version > 703 || v:version == 703 && has("patch541")
     set formatoptions+=j " Delete comment character when joining commented lines
 endif
 
+" Enable latex support vim-latexsuit plugin "
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
 
 
 " =========== FILES =================
@@ -375,6 +378,13 @@ try
     colorscheme vividchalk
 catch
 endtry
+
+" now try to use EasyColor plugin 
+" (because it has bandit color scheme to support TagHighlight plugin)"
+"try
+"    colorscheme bandit
+"catch
+"endtry
 
 " Enable syntax highting. Check out 'syntax enable' vs 'syntax on'
 syntax enable

@@ -46,8 +46,11 @@ setxkbmap -option 'caps:escape'
 # Statusbar loop
 while true ; do
    xsetroot -name "$(acpi -b) | Time $(date +"%F %R" )"
-   sleep 1s    # Update every minute
+   sleep 60s    # Update every minute
 done &
+
+# launch notification server (for notify-send or twmnc)
+twmnd &
 
 # auto launch firefox in the background
 firefox &

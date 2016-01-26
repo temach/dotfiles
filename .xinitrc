@@ -44,16 +44,16 @@ setxkbmap -option 'caps:escape'
 
 # set dwm title bar
 # Statusbar loop
-while true ; do
-   xsetroot -name "$(acpi -b) | Time $(date +"%F %R" )"
-   sleep 60s    # Update every minute
-done &
+# while true ; do
+#    xsetroot -name "$(acpi -b) | Time $(date +"%F %R" )"
+#    sleep 60s    # Update every minute
+# done &
 
 # launch notification server (for notify-send or twmnc)
 twmnd &
 
 # auto launch firefox in the background
-firefox &
+#firefox &
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
@@ -67,4 +67,5 @@ fi
 # xterm -geometry 80x50+494+51 &
 # xterm -geometry 80x20+494-0 &
 
-exec dwm
+exec startkde
+#exec dwm

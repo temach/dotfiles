@@ -29,6 +29,6 @@ for file in /etc/bash_completion.d/* ; do
 done
 
 # After each command, append to the history file
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a"
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 

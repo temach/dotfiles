@@ -17,6 +17,13 @@ URxvt*.shading:             10
 ! Controls spacing between characters in pixels (from Arch wiki)
 URxvt.letterSpace:          -2
 
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
 ! Meta modifier for keybindings
 !URxvt.modifier: super
 
@@ -45,7 +52,6 @@ URxvt.iso14755:             false
 URxvt.iso14755_52:          false
 
 !urxvt color scheme:
-
 URxvt*background: #2B2B2B
 URxvt*foreground: #DEDEDE
 

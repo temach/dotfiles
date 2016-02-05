@@ -1,3 +1,9 @@
+#
+# ~/.inputrc
+#
+# see bind --help for details
+# (especially -P option)
+#
 # Normally you have to hit ctrl-P or ctrl-N to search through history
 # with a regex. Now this is default (we always search through history)
 "\e[A": history-search-backward
@@ -7,5 +13,8 @@
 # In urxv terminal can now travel between words
 # Ctrl+right  => forward word
 # Ctrl+left   => backward word
-# "\e[B": forward-word
-# "\e[F": backward-word
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"e[1;5C": forward-word
+"e[5C": forward-word
+"ee[C": forward-word

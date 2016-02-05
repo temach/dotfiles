@@ -11,7 +11,7 @@ URxvt*boldFont: xft:Inconsolata:bold:pixelsize=13:antialias=false:hinting=true
 URxvt*depth:                24
 URxvt*borderless:           1
 URxvt*scrollBar:            false
-URxvt*saveLines:            2000
+URxvt*saveLines:            20000
 URxvt.transparent:          false
 URxvt*.shading:             10
 ! Controls spacing between characters in pixels (from Arch wiki)

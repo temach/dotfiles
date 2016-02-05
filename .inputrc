@@ -1,7 +1,11 @@
 # Normally you have to hit ctrl-P or ctrl-N to search through history
-# with a regex. Now this is default
+# with a regex. Now this is default (we always search through history)
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 "\e[C": forward-char
 "\e[D": backward-char
-
+# In urxv terminal can now travel between words
+# Ctrl+right  => forward word
+# Ctrl+left   => backward word
+# "\e[B": forward-word
+# "\e[F": backward-word

@@ -80,7 +80,7 @@ execute pathogen#infect()
 
 
 " =============================== FUNCTIONS ========================
-" Setup alias to use in colon mode (last-line mode)
+" Setup alias to use in last-line mode (command)
 function! SetupCommandAlias(from, to)
     exec 'cnoreabbrev <expr> '.a:from
                 \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
@@ -109,8 +109,6 @@ runtime macros/matchit.vim
 " Sets how many lines of history VIM has to remember (default is 20)
 set history=300
 
-" Number of undo levels
-set undolevels=400
 
 " Spaces are better than a tab character
 set expandtab
@@ -139,12 +137,12 @@ set listchars=tab:>\ ,trail:·
 " This is the way I like my quotation marks and various braces
 " What's cool is if you have :paste mode enabled, this expansions
 " will NOT take place. So to insert just one bracket toggle paste mode.
-inoremap ' ''<Left>
-inoremap " ""<Left>
-inoremap ( ()<Left>
-" inoremap < <><Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
+" inoremap ' ''<Left>
+" inoremap " ""<Left>
+" inoremap ( ()<Left>
+" " inoremap < <><Left>
+" inoremap { {}<Left>
+" inoremap [ []<Left>
 
 " Allow bash/tchs shell like editing of text when in insert mode "
 inoremap <C-e> <C-o>A
@@ -437,8 +435,7 @@ vnoremap ' `
 nnoremap ` '
 vnoremap ` '
 
-" This is totally awesome - remap jj to escape in insert mode.
-" You'll never type jj anyway, so it's great!
+" This is cool - remap jj to escape in insert mode.
 " inoremap jk <Esc>
 " inoremap kj <Esc>
 " Actually a better idea: see http://vim.wikia.com/wiki/Map_caps_lock_to_escape_in_XWindows
@@ -480,10 +477,10 @@ nmap gyl :call setreg('+', expand('%:p').':'.line('.'), 'v')<cr>
 nmap gyc :call setreg('+', expand('%:p').':'.line('.').':'.col('.'), 'v')<cr>
 
 "<C-e> and <C-y> scroll the viewport a single line. Make them faster.
-nnoremap <C-e> 5<C-e>
-nnoremap <C-y> 5<C-y>
-vnoremap <C-e> 5<C-e>
-vnoremap <C-y> 5<C-y>
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+vnoremap <C-e> 3<C-e>
+vnoremap <C-y> 3<C-y>
 
 "This is necessary to allow pasting from outside vim. It turns off auto stuff.
 "You can tell you are in paste mode when the ruler is not visible

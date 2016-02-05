@@ -50,7 +50,7 @@ setxkbmap -option 'caps:escape'
 # done &
 
 # launch notification server (for notify-send or twmnc)
-twmnd &
+# twmnd &
 
 # auto launch firefox in the background
 #firefox &
@@ -62,10 +62,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# these are not on the system anymore
 # twm &
 # xclock -geometry 50x50-1+1 &
 # xterm -geometry 80x50+494+51 &
 # xterm -geometry 80x20+494-0 &
 
 exec startkde
-#exec dwm
+# exec dwm

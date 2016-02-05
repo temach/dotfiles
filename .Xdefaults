@@ -27,8 +27,24 @@ URxvt*scrollTtyKeypress: true
 ! Meta modifier for keybindings
 !URxvt.modifier: super
 
-!! perl extensions
-! URxvt.perl-ext:             default,url-select,clipboard
+! perl extensions the clipboard allows copy paste, but seems that it works already
+! URxvt.perl-ext:             default,clipboard
+URxvt.perl-ext:             default,clipboard,font-size
+
+! ! Add keybindings for font size change
+! URxvt.keysym.C-Up:     perl:font-size:increase
+! URxvt.keysym.C-Down:   perl:font-size:decrease
+! ! Use Ctrl + Shift + Up to reset font size
+! URxvt.keysym.C-S-Up:   perl:font-size:reset
+! ! Change the step size for font change (default is 1)
+! URxvt.font-size.step: 4
+
+! Alternative keybindings for font size Up/Down
+! Add keybindings for font size change
+URxvt.keysym.Control-equal:     perl:font-size:increase
+URxvt.keysym.Control-minus:   perl:font-size:decrease
+! Use Ctrl + Shift + Up to reset font size
+URxvt.keysym.Control-plus:   perl:font-size:reset
 
 ! url-select (part of urxvt-perls package)
 ! URxvt.keysym.M-u:           perl:url-select:select_next

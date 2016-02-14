@@ -68,5 +68,8 @@ fi
 # xterm -geometry 80x50+494+51 &
 # xterm -geometry 80x20+494-0 &
 
-exec startkde
+# exec awesome
+# fbsetbg /usr/share/wallpapers/EveningGlow/contents/images/1280x800.jpg
+# exec startkde
 # exec dwm
+exec startfluxbox

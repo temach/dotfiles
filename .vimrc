@@ -195,7 +195,13 @@ if has("autocmd")
     autocmd BufWritePost *.h call system("ctags * --exclude=.git")
     autocmd BufWritePost *.cpp call system("ctags * --exclude=.git")
     autocmd BufWritePost *.hpp call system("ctags * --exclude=.git")
-    autocmd BufWritePost *.py call system("ctags * --exclude=.git")
+endif
+
+" Set some files to get special syntax highlighting so we dont
+" have to type :setf xxx every time we edit them
+if has("autocmd")
+    autocmd BufRead *twmn*conf setfiletype dosini
+    autocmd BufRead /home/artem/.fluxbox/keys setfiletype fluxkeys
 endif
 
 " New awesome stuff: Persistent Undo!

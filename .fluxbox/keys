@@ -96,7 +96,7 @@ Mod1 F2 :Exec fbrun
 Mod1 Shift g :Exec fbrun
 
 # run skippy-xd (like macosx expose)
-Mod1 Shift w :Exec skippy-xd
+Mod1 Shift w :Exec skippy-xd-fix
 
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes

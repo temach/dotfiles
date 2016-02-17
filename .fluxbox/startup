@@ -14,16 +14,17 @@ unclutter -idle 2 &
 # idesk &
 ipager -c /home/artem/.ipager/temach_green.conf &
 nm-applet --sm-disable &
-dolphin4 &
+# dolphin4 &
 dolphin4 ~/Desktop/Uni/ &
 # run notification daemon for notify-send/twmnc
 twmnd &
 # battery indicator
 cbatticon --critical-level=10 --low-level=15 --update-interval=180 --command-critical-level='/home/artem/temach-arch-linux/battery_warn.sh' &
 # konversation &
-firefox &
 urxvt &
 urxvt &
+parcellite &
+redshift &
 
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.

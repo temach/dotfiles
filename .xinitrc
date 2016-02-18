@@ -41,6 +41,7 @@ fi
 
 # start some nice programs
 setxkbmap -option 'caps:escape'
+setxkbmap -option 'terminate:ctrl_alt_bksp'
 
 # set dwm title bar
 # Statusbar loop

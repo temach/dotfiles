@@ -10,7 +10,7 @@
 "\e[B": history-search-forward
 
 set colored-stats on
-set history-size 10000
+set history-size 100000
 set skip-completed-text on
 
 # # All the standard bindings

@@ -3,9 +3,10 @@
 #
 
 # If not running interactively, don't do anything
-if [[ $- != *i* ]]; then
-    return
-fi
+[[ $- != *i* ]] && return
+
+# so that after you cd into a link the cd ../ and pwd work as usual
+set -o physical
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '

@@ -179,7 +179,7 @@ let g:tex_flavor = "latex"
 " =========== FILES =================
 " Help when typing commands (after colon in last line mode)
 set wildmenu
-set wildmode=longest:full,full
+set wildmode=longest,list
 
 " Ignore temporary object files when menu completion
 set wildignore=*.o,*~,*.pyc,*/.DS_Store,*/.git/*,*/.svn/*,*/.hg/*

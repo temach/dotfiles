@@ -34,4 +34,14 @@ done
 # After each command, append to the history file
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
+# alias to exit cleanly
+alias poweroff='killall -s SIGTERM fluxbox && systemctl poweroff'
 
+alias ll='ls -la'
+
+
+# enable autojump
+source /etc/profile.d/autojump.sh
+
+
+# remember the Do The Right Extraction dtrx command

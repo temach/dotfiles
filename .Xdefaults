@@ -6,16 +6,16 @@
 
 ! URxvt*font: xft:Liberation Mono:pixelsize=14:antialias=false:hinting=true
 ! URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=14:antialias=false:hinting=true
-URxvt*font: xft:Inconsolata:pixelsize=14:antialias=true:hinting=true
+URxvt*font: xft:Inconsolata:pixelsize=17:antialias=true:hinting=true
 URxvt*boldFont: xft:Inconsolata:bold:pixelsize=14:antialias=false:hinting=true
 URxvt*depth:                24
 URxvt*borderless:           1
 URxvt*scrollBar:            false
 URxvt*saveLines:            20000
-URxvt.transparent:          false
-URxvt*.shading:             10
+URxvt*transparent:          false
+URxvt*shading:             10
 ! Controls spacing between characters in pixels (from Arch wiki)
-URxvt.letterSpace:          -2
+URxvt*letterSpace:          0
 
 ! do not scroll with output
 URxvt*scrollTtyOutput: false

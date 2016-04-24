@@ -32,6 +32,7 @@ if [ -f "$userresources" ]; then
 
 
     xrdb -merge "$userresources"
+    xrdb -merge "~/.Xdefaults"
 
 fi
 

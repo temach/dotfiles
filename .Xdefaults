@@ -1,17 +1,10 @@
-! -- Fonts for URXVT terminal -- !
-! URxvt*font:                     xft:Menlo Regular:size=6
-! URxvt.scrollBar:                false
-! URxvt.background:               Black
-! URxvt.foreground:               Yellow
+URxvt*font: xft:Inconsolata:pixelsize=12:antialias=true:hinting=true
+URxvt*boldFont: xft:Inconsolata:bold:pixelsize=12:antialias=true:hinting=true
 
-! URxvt*font: xft:Liberation Mono:pixelsize=14:antialias=false:hinting=true
-! URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=14:antialias=false:hinting=true
-URxvt*font: xft:Inconsolata:pixelsize=17:antialias=true:hinting=true
-URxvt*boldFont: xft:Inconsolata:bold:pixelsize=14:antialias=false:hinting=true
 URxvt*depth:                24
 URxvt*borderless:           1
 URxvt*scrollBar:            false
-URxvt*saveLines:            20000
+URxvt*saveLines:            200000
 URxvt*transparent:          false
 URxvt*shading:             10
 ! Controls spacing between characters in pixels (from Arch wiki)
@@ -30,14 +23,7 @@ URxvt*scrollTtyKeypress: true
 ! perl extensions the clipboard allows copy paste, but seems that it works already
 ! URxvt.perl-ext:             default,clipboard
 URxvt.perl-ext:             default,clipboard,font-size
-
-! ! Add keybindings for font size change
-! URxvt.keysym.C-Up:     perl:font-size:increase
-! URxvt.keysym.C-Down:   perl:font-size:decrease
-! ! Use Ctrl + Shift + Up to reset font size
-! URxvt.keysym.C-S-Up:   perl:font-size:reset
-! ! Change the step size for font change (default is 1)
-! URxvt.font-size.step: 4
+URxvt.perl-ext-common:      default,clipboard,tabbed,matcher,resize-font,-tabbed,theme
 
 ! Alternative keybindings for font size Up/Down
 ! Add keybindings for font size change
@@ -46,89 +32,75 @@ URxvt.keysym.Control-minus:   perl:font-size:decrease
 ! Use Ctrl + Shift + Up to reset font size
 URxvt.keysym.Control-plus:   perl:font-size:reset
 
-! url-select (part of urxvt-perls package)
-! URxvt.keysym.M-u:           perl:url-select:select_next
-! URxvt.url-select.autocopy:  true
-! URxvt.url-select.button:    2
-! URxvt.url-select.launcher:  firefox
-! URxvt.url-select.underline: true
-
-! Nastavuje kopirovani (real copy/paste!)
-! URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
-! URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
-
-! Font size on the fly
-! URxvt.keysym.C-Up:     perl:font-size:increase
-! URxvt.keysym.C-Down:   perl:font-size:decrease
-! URxvt.keysym.C-S-Up:   perl:font-size:incglobal
-! URxvt.keysym.C-S-Down: perl:font-size:decglobal
-
 ! disable the stupid ctrl+shift 'feature'
 URxvt.iso14755:             false
 URxvt.iso14755_52:          false
 
-!urxvt color scheme:
-URxvt*background: #2B2B2B
-URxvt*foreground: #DEDEDE
 
+! ! Urxvt scheme for dim light
+! ! remember to run "xrdb merge ~/.Xdefaults" after changing theme
+! URxvt*fadeColor: #fdf6e3
+! URxvt*borderColor: #000000
+! URxvt*cursorColor: #888888
+! URxvt*colorUL: #86a2b0
+! URxvt*background: #2B2B2B
+! URxvt*foreground: #DEDEDE
+! ! black
+! URxvt*color0  : #2E3436
+! URxvt*color8  : #555753
+! ! red
+! URxvt*color1  : #CC0000
+! URxvt*color9  : #EF2929
+! ! green
+! URxvt*color2  : #4E9A06
+! URxvt*color10 : #8AE234
+! ! yellow
+! URxvt*color3  : #C4A000
+! URxvt*color11 : #FCE94F
+! ! blue
+! URxvt*color4  : #3465A4
+! URxvt*color12 : #729FCF
+! ! magenta
+! URxvt*color5  : #75507B
+! URxvt*color13 : #AD7FA8
+! ! cyan
+! URxvt*color6  : #06989A
+! URxvt*color14 : #34E2E2
+! ! white
+! URxvt*color7  : #D3D7CF
+! URxvt*color15 : #EEEEEC
+
+
+! Theme for bright daylight
+! remember to run "xrdb merge ~/.Xdefaults" after changing theme
+URxvt*fadeColor: #0f0f0f
+URxvt*borderColor: #ffffff
+URxvt*cursorColor: #333333
 URxvt*colorUL: #86a2b0
-
-! Color (Much smoother contrast, good at good light)
-! ! black
-URxvt*color0  : #2E3436
-URxvt*color8  : #555753
-! red
-URxvt*color1  : #CC0000
-URxvt*color9  : #EF2929
-! green
-URxvt*color2  : #4E9A06
-URxvt*color10 : #8AE234
-! yellow
-URxvt*color3  : #C4A000
-URxvt*color11 : #FCE94F
-! blue
-URxvt*color4  : #3465A4
-URxvt*color12 : #729FCF
-! magenta
-URxvt*color5  : #75507B
-URxvt*color13 : #AD7FA8
-! cyan
-URxvt*color6  : #06989A
-URxvt*color14 : #34E2E2
-! white
-URxvt*color7  : #D3D7CF
-URxvt*color15 : #EEEEEC
-
-! Alternative color (Much better contrast, good at low light)
-! ! black
-! URxvt*color0:  #000000
-! ! red
-! URxvt*color1:  #B40000
-! ! green
-! URxvt*color2:  #00AA00
-! ! yellow
-! URxvt*color3:  #AAAA00
-! ! blue
-! URxvt*color4:  #5555AA
-! ! magenta
-! URxvt*color5:  #AA00AA
-! ! cyan
-! URxvt*color6:  #00AAAA
-! ! white
-! URxvt*color7:  #AAAAAA
-! ! black (now and below: bright)
-! URxvt*color8:  #555555
-! ! red
-! URxvt*color9:  #FF0000
-! ! green
-! URxvt*color10: #00FF00
-! ! yellow
-! URxvt*color11: #FFFF00
-! ! blue
-! URxvt*color12: #6464FF
-! ! magenta
-! URxvt*color13: #FF00FF
-! ! cyan
-! URxvt*color14: #00FFFF
-! ! white
-! URxvt*color15: #FFFFFF
+URxvt*background: #fef9e9
+URxvt*foreground: #606060
+! black dark/light
+URxvt*color0: #eee8d5
+URxvt*color8: #fdf6e3
+! red dark/light
+URxvt*color1: #56011f
+URxvt*color9: #7e012d
+! green dark/light
+URxvt*color2: #1f5601
+URxvt*color10: #2d7e01
+! yellow dark/light
+URxvt*color3: #495601
+URxvt*color11: #6b7e01
+! blue dark/light
+URxvt*color4: #011f56
+URxvt*color12: #012d7e
+! magenta dark/light
+URxvt*color5: #560149
+URxvt*color13: #7e016b
+! cyan dark/light
+URxvt*color6: #014956
+URxvt*color14: #016b7e
+! white dark/light
+! URxvt*color7: #8c8c8c
+URxvt*color7: #787878
+URxvt*color15: #002b36

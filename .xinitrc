@@ -41,8 +41,10 @@ if [ -f "$usermodmap" ]; then
 fi
 
 # start some nice programs
-setxkbmap -option 'caps:escape'
-setxkbmap -option 'terminate:ctrl_alt_bksp'
+#setxkbmap -option 'caps:escape'
+#setxkbmap -option 'terminate:ctrl_alt_bksp'
+# setxkbmap -layout 'halfqwerty(caps)'
+# xmodmap -e "pointer = 3 2 1"
 
 # set dwm title bar
 # Statusbar loop
@@ -63,6 +65,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  done
  unset f
 fi
+
+# to run fcitx, multilanguage input
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 # these are not on the system anymore
 # twm &

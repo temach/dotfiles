@@ -45,6 +45,7 @@ Mod1 Shift w :Exec skippy-xd-fix
 
 # take screenshot adn save to Pictures folder
 Mod1 Shift t :Exec import -window root ~/Pictures/$(date '+%Y-%m-%d_at_%H:%M:%S')_screenshot.png
+Mod1 Shift r :Exec import -window root ~/Desktop/Uni/coursework-2016-2017-docs/explain/$(date '+%Y-%m-%d_at_%H:%M:%S')_screenshot.png
 
 
 ##############################

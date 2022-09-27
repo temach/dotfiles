@@ -71,6 +71,41 @@ URxvt.iso14755_52:          false
 ! URxvt*color15 : #EEEEEC
 
 
+! ! Theme for bright daylight
+! ! remember to run "xrdb merge ~/.Xdefaults" after changing theme
+! URxvt*fadeColor: #0f0f0f
+! URxvt*borderColor: #ffffff
+! URxvt*cursorColor: #333333
+! URxvt*colorUL: #86a2b0
+! URxvt*background: #fef9e9
+! URxvt*foreground: #505050
+! ! black dark/light
+! URxvt*color0: #ded9c9
+! URxvt*color8: #beb9a9
+! ! red dark/light
+! URxvt*color1: #7e012d
+! URxvt*color9: #56011f
+! ! green dark/light
+! URxvt*color2: #2d7e01
+! URxvt*color10: #1f5601
+! ! yellow dark/light
+! URxvt*color3: #6b7e01
+! URxvt*color11: #4A5601
+! ! blue dark/light
+! URxvt*color4: #012d7e
+! URxvt*color12: #011f56
+! ! magenta dark/light
+! URxvt*color5: #7e016b
+! URxvt*color13: #560149
+! ! cyan dark/light
+! URxvt*color6: #016b7e
+! URxvt*color14: #014956
+! ! white dark/light
+! URxvt*color7: #999999
+! URxvt*color15: #002b36
+
+
+
 ! Theme for bright daylight
 ! remember to run "xrdb merge ~/.Xdefaults" after changing theme
 URxvt*fadeColor: #0f0f0f
@@ -78,29 +113,28 @@ URxvt*borderColor: #ffffff
 URxvt*cursorColor: #333333
 URxvt*colorUL: #86a2b0
 URxvt*background: #fef9e9
-URxvt*foreground: #404040
+URxvt*foreground: #505050
 ! black dark/light
-URxvt*color0: #fdf6e3
-URxvt*color8: #eee8d5
+URxvt*color0: #ded9c9
+URxvt*color8: #beb9a9
 ! red dark/light
-URxvt*color1: #7e012d
-URxvt*color9: #56011f
+URxvt*color1: #B23000
+URxvt*color9: #8F002D
 ! green dark/light
-URxvt*color2: #2d7e01
-URxvt*color10: #1f5601
+URxvt*color2: #00B230
+URxvt*color10: #2D8F00
 ! yellow dark/light
-URxvt*color3: #6b7e01
-URxvt*color11: #4A5601
+URxvt*color3: #B28900
+URxvt*color11: #758F00
 ! blue dark/light
-URxvt*color4: #012d7e
-URxvt*color12: #011f56
+URxvt*color4: #3000B2
+URxvt*color12: #002D8F
 ! magenta dark/light
-URxvt*color5: #7e016b
-URxvt*color13: #560149
+URxvt*color5: #8900B2
+URxvt*color13: #8F0075
 ! cyan dark/light
-URxvt*color6: #016b7e
-URxvt*color14: #014956
+URxvt*color6: #00B289
+URxvt*color14: #00758F
 ! white dark/light
-! URxvt*color7: #8c8c8c
 URxvt*color7: #999999
 URxvt*color15: #002b36

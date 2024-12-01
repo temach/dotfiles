@@ -5,7 +5,7 @@ Starting with the basics, the repo needs to live somewhere, so we initialise a b
 
 We make an alias:
 
-alias dotfiles='git --git-dir=/home/mx/.dotfiles --work-tree=/'
+alias dotfiles='git --git-dir=/home/artem/dotfiles/.git --work-tree=/'
 
 Now typing dotfiles status or dotfiles log will show the status or log of the repo, regardless of if you're currently in another repo. Of course looking at the status will probably take forever as the work tree is /, so it will list every single file on the filesystem as untracked. There are a few ways to stop this, but I went with simply telling git not to show untracked files:
 

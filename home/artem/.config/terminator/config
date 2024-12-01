@@ -1,0 +1,36 @@
+[global_config]
+  focus = mouse
+  ask_before_closing = always
+  new_tab_after_current_tab = True
+[keybindings]
+  next_tab = <Primary><Alt>Right
+  prev_tab = <Primary><Alt>Left
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_6 = <Alt>6
+  switch_to_tab_7 = <Alt>7
+  switch_to_tab_8 = <Alt>8
+[profiles]
+  [[default]]
+    allow_bold = False
+    icon_bell = False
+    background_color = "#282828"
+    font = Hack 18
+    foreground_color = "#ebdbb2"
+    show_titlebar = False
+    scrollback_infinite = True
+    use_system_font = False
+    title_hide_sizetext = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]

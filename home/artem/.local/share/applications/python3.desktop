@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Python3
+Comment=Python3 launched in Terminator shell
+TryExec=terminator
+Exec=terminator -e python3
+Icon=terminator
+Categories=Utility;TerminalEmulator;System;Python;
+Keywords=terminal;shell;prompt;command;commandline;python;

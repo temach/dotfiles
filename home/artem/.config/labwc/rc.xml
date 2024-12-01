@@ -43,4 +43,12 @@
 
   </keyboard>
 
+
+  <focus>
+    <default />
+    <followMouse>yes</followMouse>
+    <followMouseRequiresMovement>yes</followMouseRequiresMovement>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+
 </labwc_config>

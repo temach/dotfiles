@@ -26,6 +26,17 @@
       <action name="Execute" command="brightnessctl --exponent set 7%-" />
     </keybind>
 
+    <keybind key="XF86_AudioLowerVolume">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.003" />
+    </keybind>
+    <keybind key="XF86_AudioRaiseVolume">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.003" />
+    </keybind>
+    <keybind key="XF86_AudioMute">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.003" />
+    </keybind>
+
+
     <!-- launch runner menu -->
     <keybind key="A-r">
       <action name="Execute" command="fuzzel" />

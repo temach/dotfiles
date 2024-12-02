@@ -54,11 +54,13 @@ setopt INC_APPEND_HISTORY       # Save each command to history immediately
 setopt EXTENDED_HISTORY         # Save timestamps in history file
 setopt HIST_REDUCE_BLANKS       # Remove unnecessary blank spaces from history
 
-# set title of compatiable terminals to current working directory
+# set title of compatiable terminals
 function set_terminal_tab_title() {
-    print -Pn "\e]0;%~\a"
+    local cmd=${1[1,10]}
+    # to current working directory and 10 chars of latest command
+    print -Pn "\e]0;%~ - $cmd\a"
 }
-precmd_functions+=(set_terminal_tab_title)
+preexec_functions+=(set_terminal_tab_title)
 
 # show git branch in prompt
 function update_prompt_with_git_branch() {

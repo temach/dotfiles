@@ -17,7 +17,7 @@ alias dotfiles="git --git-dir=/home/artem/dotfiles/.git --work-tree=/"
 export MOZ_ENABLE_WAYLAND=1
 export EDITOR="vim"
 export TERMINAL="terminator"
-export CHROMIUM_USER_DATA_DIR="$HOME/.chromium"
+export ELECTRON_OZONE_PLATFORM_HINT="wayland"
 
 # To find your country code is, refer to the layout section of:
 # /usr/share/X11/xkb/rules/evdev.lst

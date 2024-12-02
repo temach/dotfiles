@@ -27,13 +27,16 @@
     </keybind>
 
     <keybind key="XF86_AudioLowerVolume">
-      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.003" />
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-" />
     </keybind>
     <keybind key="XF86_AudioRaiseVolume">
-      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.003" />
+      <action name="Execute" command="wpctl set-volume --limit 0.15 @DEFAULT_AUDIO_SINK@ 1%+" />
     </keybind>
     <keybind key="XF86_AudioMute">
-      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.003" />
+      <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
+    </keybind>
+    <keybind key="XF86_AudioMicMute">
+      <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" />
     </keybind>
 
 

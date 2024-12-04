@@ -8,14 +8,15 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/media"
     ],
     "modules-center": [
     ],
     "modules-right": [
         "mpd",
         "idle_inhibitor",
+	"custom/keyboardlang",
         "pulseaudio",
+	"custom/vpn",
         "network",
 	"bluetooth",
         "power-profiles-daemon",
@@ -109,7 +110,8 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": ["░", "▒", "▓", "█"],
+	"tooltip": "Screen brightness"
     },
     "battery": {
         "states": {
@@ -158,8 +160,8 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": "{volume}%  {icon} {format_source}",
+        "format-muted": "{volume}%  {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -171,19 +173,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "on-click": "helvum"
     },
     "custom/power": {
         "format" : "⏻ ",
@@ -196,5 +186,16 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/vpn": {
+        "exec": "sh -c 'nmcli connection show --active | rg -q infravpn && echo on || echo off'",
+        "on-click": "sh -c 'nmcli connection show --active | rg -q infravpn && nmcli connection down infravpn || nmcli connection up infravpn'",
+        "interval": 5,
+        "format": "VPN {}"
+    },
+    "custom/keyboardlang": {
+        "exec": "[[ $(cat /sys/devices/virtual/input/input23/input23::capslock/brightness) == '1' ]] && echo RU || echo EN",
+        "interval": 1,
+        "format": "lang-{}"
     }
 }

@@ -1,14 +1,14 @@
 # Created by newuser for 5.9
 
-# ORBIT BT5.0 FF:1F:54:58:E0:F7
 # bluetoothctl power on
-# bluetoothctl connect FF:1F:54:58:E0:F7
+# bluetoothctl connect FF:1F:54:58:E0:F7 ORBIT BT5.0
+# bluetoothctl connect 94:FB:A7:30:31:5A HyperX Cloud Buds
 
 # use CRTL-A and CTRL-E for jumping around shell cli
 bindkey -e
 
 alias ll="ls -la"
-alias hh="history -E"
+alias hh="cat /home/artem/.zsh_history"
 alias f="find "
 alias j="z "
 alias vim="nvim "

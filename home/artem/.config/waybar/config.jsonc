@@ -138,12 +138,13 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "on-click": "sh -c 'terminator --execute nmtui connect'"
     },
     "bluetooth": {
 	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device

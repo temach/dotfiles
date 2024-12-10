@@ -7,14 +7,6 @@
 
 <labwc_config>
 
-<!--
-  <theme>
-    <name></name>
-    <cornerRadius>8</cornerRadius>
-    <font name="sans" size="10" />
-  </theme>
--->
-
   <keyboard>
     <default />
 
@@ -41,13 +33,18 @@
     </keybind>
 
     <keybind key="XF86_Calculator">
-	    <action name="Execute" command="sh -c 'x=/sys/class/leds/platform::kbd_backlight/brightness; if [[ $( cat $x ) = 1 ]] then echo 0 > $x ; else echo 1 > $x ; fi'" />
+      <action name="Execute" command="sh -c 'x=/sys/class/leds/platform::kbd_backlight/brightness; if [[ $( cat $x ) = 1 ]] then echo 0 > $x ; else echo 1 > $x ; fi'" />
     </keybind>
 
 
     <!-- launch runner menu -->
     <keybind key="A-r">
       <action name="Execute" command="fuzzel" />
+    </keybind>
+
+    <!-- launch terminator tab/window -->
+    <keybind key="A-t">
+      <action name="Execute" command="terminator --new-tab" />
     </keybind>
 
     <!-- launch clipboard history -->
@@ -60,12 +57,22 @@
       <action name="Execute" command="sh -c 'slurp | grim -g - - | swappy -f -'" />
     </keybind>
 
-    <!-- Remove a previously defined keybind -->
-    <keybind key="W-F4">
-      <action name="None" />
-    </keybind>
-
   </keyboard>
+
+
+  <mouse>
+    <default />
+
+    <context name="Frame">
+      <mousebind button="A-Left" action="Drag">
+        <action name="Move" />
+      </mousebind>
+      <mousebind button="A-S-Left" action="Drag">
+        <action name="Resize" />
+      </mousebind>
+    </context>
+
+  </mouse>
 
 
   <focus>

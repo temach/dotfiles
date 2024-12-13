@@ -33,15 +33,14 @@ export PATH="$PATH:/home/artem/.local/bin"
 # the caps keyboard led will indicate keyboard layout
 export XKB_DEFAULT_LAYOUT=us,ru(mac)
 export XKB_DEFAULT_OPTIONS=grp:ctrl_space_toggle,grp_led:caps
-# export XKB_DEFAULT_OPTIONS=grp:win_space_toggle
 
 # autojump to frequent directories
 # see: https://github.com/rupa/z/blob/master/README
 source ~/.z-rupa-autojump.sh
 
 # Bind Up and Down arrows to prefix-based history search
-bindkey '^[[A' history-search-backward  # Up arrow
-bindkey '^[[B' history-search-forward   # Down arrow
+bindkey '^[[A' history-beginning-search-backward  # Up arrow
+bindkey '^[[B' history-beginning-search-forward   # Down arrow
 
 # case insensitive path-completion and highlight current menu entry
 autoload -Uz +X compinit && compinit
@@ -49,20 +48,20 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 
 # Set history file and size
-HISTFILE=~/.zsh_history         # Location of history file
+HISTFILE=~/.zsh_history               # Location of history file
 HISTSIZE=1000000                      # Unlimited in-memory history
 SAVEHIST=1000000                      # Unlimited saved history
 
+# see zsh options: https://zsh.sourceforge.io/Doc/Release/Options.html#Description-of-Options
 # Remove duplicate history entries
-# setopt HIST_IGNORE_ALL_DUPS   # Remove all duplicates in history
 setopt HIST_FIND_NO_DUPS        # Avoid showing duplicates during search
-
-# Additional recommended history options
-setopt SHARE_HISTORY            # Share history across all Zsh sessions
-setopt APPEND_HISTORY           # Append new history lines to the history file
 setopt INC_APPEND_HISTORY       # Save each command to history immediately
 setopt EXTENDED_HISTORY         # Save timestamps in history file
 setopt HIST_REDUCE_BLANKS       # Remove unnecessary blank spaces from history
+setopt HIST_IGNORE_SPACE        # If command starts with space do not add to hist file
+setopt HIST_IGNORE_DUPS         # Do not save consecutive duplicate commands
+
+setopt AUTO_CD                  # change to directory if its name matches and is not a command
 
 # set title of compatiable terminals
 function set_terminal_tab_title() {

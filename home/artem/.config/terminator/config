@@ -1,7 +1,7 @@
 [global_config]
   focus = mouse
+  enabled_plugins = InactivityWatch, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler
   ask_before_closing = always
-  case_sensitive = False
   new_tab_after_current_tab = True
 [keybindings]
   next_tab = <Primary><Alt>Right

@@ -1,5 +1,5 @@
 set nocompatible
-set encoding=utf-8
+set enc=utf-8
 set fileencoding=utf-8
 
 " Disable documentation look up with Shift + K

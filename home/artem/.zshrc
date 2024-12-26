@@ -23,6 +23,7 @@ export TERMINAL="terminator"
 export ELECTRON_OZONE_PLATFORM_HINT="wayland"
 export GDK_BACKEND=wayland
 export PATH="$PATH:/home/artem/.local/bin"
+export LIBSEAT_BACKEND=logind
 
 # To find your country code is, refer to the layout section of:
 # /usr/share/X11/xkb/rules/evdev.lst

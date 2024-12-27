@@ -1,0 +1,76 @@
+# see: https://github.com/rvaiya/keyd/blob/master/docs/keyd.scdoc
+[ids]
+0001:0001:a38e6885
+
+# remember keyd kill sequence: Backspace + Esc + Enter to exit this mode
+[main]
+# number row
+` = noop
+1 = noop
+2 = noop
+3 = noop
+4 = noop
+5 = noop
+6 = noop
+7 = noop
+8 = noop
+9 = noop
+0 = noop
+- = noop
+= = noop
+backspace = noop
+
+# qwerty row
+tab = noop
+q = noop
+w = noop
+e = noop
+r = noop
+t = noop
+y = noop
+u = noop
+i = noop
+o = noop
+p = noop
+[ = noop
+] = noop
+\ = noop
+
+# asdf row
+capslock = noop
+a = noop
+s = noop
+d = noop
+f = noop
+g = noop
+h = noop
+j = noop
+k = noop
+l = noop
+; = noop
+' = noop
+enter = noop
+
+# zxcv row
+shift = noop
+z = noop
+x = noop
+c = noop
+v = noop
+b = noop
+n = noop
+m = noop
+, = noop
+. = noop
+/ = noop
+
+# bottom row
+control = noop
+fn = noop
+meta = noop
+alt = noop
+space = noop
+left = noop
+up = noop
+down = noop
+right = noop

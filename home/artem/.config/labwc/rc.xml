@@ -9,6 +9,15 @@
 
   <keyboard>
     <default />
+    <!-- 
+      Define a key binding in the format modifier-key, where supported modifiers are:
+       -   S (shift)
+       -   C (control)
+       -   A or Mod1 (alt)
+       -   H or Mod3 (hyper)
+       -   W or Mod4 (super / logo)
+       -   M or Mod5 (meta)
+    -->
 
     <!-- make step smaller for low brightness -->
     <keybind key="XF86_MonBrightnessUp">
@@ -20,10 +29,10 @@
 
     <!-- adjust volume with wpctl not amixer -->
     <keybind key="XF86_AudioLowerVolume">
-      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-" />
     </keybind>
     <keybind key="XF86_AudioRaiseVolume">
-      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" />
+      <action name="Execute" command="wpctl set-volume --limit 2.0 @DEFAULT_AUDIO_SINK@ 10%+" />
     </keybind>
     <keybind key="XF86_AudioMute">
       <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
@@ -34,6 +43,11 @@
 
     <keybind key="XF86_Calculator">
       <action name="Execute" command="sh -c 'x=/sys/class/leds/platform::kbd_backlight/brightness; if [[ $( cat $x ) = 1 ]] then echo 0 > $x ; else echo 1 > $x ; fi'" />
+    </keybind>
+
+    <!-- launch root menu that allows to toggle trackpad/keyboard on/off -->
+    <keybind key="XF86_Favorites">
+      <action name="ShowMenu" menu="root-menu" />
     </keybind>
 
 
@@ -81,5 +95,41 @@
     <followMouseRequiresMovement>yes</followMouseRequiresMovement>
     <raiseOnFocus>no</raiseOnFocus>
   </focus>
+
+  <!--
+    The *category* attribute is optional and can be set to touch, touchpad,
+    non-touch, default or the name of a device. You can obtain device names by
+    running *libinput list-devices* as root or member of the input group.
+
+    Tap is set to *yes* by default. All others are left blank in order to use
+    device defaults.
+
+    All values are [yes|no] except for:
+      - pointerSpeed [-1.0 to 1.0]
+      - accelProfile [flat|adaptive]
+      - tapButtonMap [lrm|lmr]
+      - clickMethod [none|buttonAreas|clickfinger]
+      - sendEventsMode [yes|no|disabledOnExternalMouse]
+      - calibrationMatrix [six float values split by space]
+      - scrollFactor [float]
+  -->
+  <libinput>
+    <device category="ELAN06FA:00 04F3:3293 Touchpad">
+      <naturalScroll></naturalScroll>
+      <leftHanded></leftHanded>
+      <pointerSpeed></pointerSpeed>
+      <accelProfile></accelProfile>
+      <tap>yes</tap>
+      <tapButtonMap></tapButtonMap>
+      <tapAndDrag></tapAndDrag>
+      <dragLock></dragLock>
+      <middleEmulation></middleEmulation>
+      <disableWhileTyping></disableWhileTyping>
+      <clickMethod></clickMethod>
+      <sendEventsMode>yes</sendEventsMode>
+      <calibrationMatrix></calibrationMatrix>
+      <scrollFactor>1.0</scrollFactor>
+    </device>
+  </libinput>
 
 </labwc_config>

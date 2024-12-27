@@ -55,6 +55,13 @@
   <!--
   <menu id="client-list-combined-menu" label="Running..." />
   -->
+
+  <item label="ToggleTrackpadAndKeyboard">
+    <action name="Execute">
+      <command>sh -c "/home/artem/.config/labwc/toggle-trackpad-keyboard-noop.sh"</command>
+    </action>
+  </item>
+
   <item label="Web browser">
     <action name="Execute" command="firefox" />
   </item>
@@ -67,6 +74,8 @@
   <item label="Exit">
     <action name="Exit" />
   </item>
+
+
   <item label="Poweroff">
     <action name="Execute" command="systemctl -i poweroff" />
   </item>

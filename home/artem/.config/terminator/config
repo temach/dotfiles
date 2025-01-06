@@ -4,6 +4,7 @@
   ask_before_closing = always
   new_tab_after_current_tab = True
 [keybindings]
+  zoom_in = <Primary>equal
   next_tab = <Primary><Alt>Right
   prev_tab = <Primary><Alt>Left
   switch_to_tab_1 = <Alt>1

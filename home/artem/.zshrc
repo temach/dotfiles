@@ -3,6 +3,9 @@
 # bluetoothctl power on
 # bluetoothctl connect FF:1F:54:58:E0:F7 ORBIT BT5.0
 # bluetoothctl connect 94:FB:A7:30:31:5A HyperX Cloud Buds
+#
+# to make bluetooth work with windows and linux see: https://wiki.archlinux.org/title/Bluetooth#Dual_boot_pairing
+
 
 # use CRTL-A and CTRL-E for jumping around shell cli
 bindkey -e

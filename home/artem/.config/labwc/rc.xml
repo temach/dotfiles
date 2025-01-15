@@ -130,6 +130,22 @@
       <calibrationMatrix></calibrationMatrix>
       <scrollFactor>1.0</scrollFactor>
     </device>
+    <device category="Kensington ORBIT WIRELESS TB Mouse">
+      <naturalScroll></naturalScroll>
+      <leftHanded></leftHanded>
+      <pointerSpeed>-0.5</pointerSpeed>
+      <accelProfile>adaptive</accelProfile>
+      <tap>yes</tap>
+      <tapButtonMap></tapButtonMap>
+      <tapAndDrag></tapAndDrag>
+      <dragLock></dragLock>
+      <middleEmulation></middleEmulation>
+      <disableWhileTyping></disableWhileTyping>
+      <clickMethod></clickMethod>
+      <sendEventsMode>yes</sendEventsMode>
+      <calibrationMatrix></calibrationMatrix>
+      <scrollFactor>0.5</scrollFactor>
+    </device>
   </libinput>
 
 </labwc_config>

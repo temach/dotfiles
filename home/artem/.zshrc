@@ -17,8 +17,12 @@ alias j="z "
 alias vim="nvim "
 alias dotfiles="git --git-dir=/home/artem/dotfiles/.git --work-tree=/"
 alias k="kubectl "
+alias sps="sops --keyservice tcp://127.0.0.1:5000 "
 
 alias rmmod_snd_sof_all="sudo rmmod snd_sof_pci_intel_mtl snd_sof_intel_hda_generic snd_sof_intel_hda_common snd_sof_pci snd_sof_intel_hda snd_sof snd_sof_utils snd_soc_hdac_hda snd_soc_dmic snd_sof soundwire_intel snd_sof_intel_hda_mlink snd_sof_xtensa_dsp snd_hda_ext_core" 
+
+# before rsync run "sudo ncdu /" to find and exclude unnecessary large files
+alias rsync_arch_to_new_partition="sudo rsync -aAXHv --exclude='/dev/*' --exclude='/proc/*' --exclude='/sys/*' --exclude='/tmp/*' --exclude='/run/*' --exclude='/mnt/*' --exclude='/media/*' --exclude='/boot/*' --exclude='/lost+found/' --exclude='/var/lib/docker/overlay2/*' --exclude='/home/artem/axl*' --exclude='/home/artem/Downloads/*' --exclude='/var/cache/*' / /mnt"
 
 export MOZ_ENABLE_WAYLAND=1
 export EDITOR="nvim"

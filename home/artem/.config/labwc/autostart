@@ -1,5 +1,8 @@
 # Example autostart file
 
+# background
+swaybg --mode fill --image ~/backgrounds/marnie006.jpg 2>&1 &
+
 # start clipboard history
 wl-paste --watch cliphist store 2>&1 &
 

@@ -8,8 +8,16 @@
 set -euxo pipefail
 
 
-# "t" is sed branching, see https://getdocs.org/Sed/Branching-and-flow-control
-sed -i -e 's@<sendEventsMode>no</sendEventsMode>@<sendEventsMode>yes</sendEventsMode>@ ; t ; s@<sendEventsMode>yes</sendEventsMode>@<sendEventsMode>no</sendEventsMode>@' ~/.config/labwc/rc.xml 
+# gnu awk has inplace extension
+# sub returns 0 or 1 depending on if it modified $0 string
+gawk -i inplace '
+BEGIN { done_once = 0 }
+{
+    if (! done_once) { done_once = sub("<sendEventsMode>no</sendEventsMode>", "<sendEventsMode>yes</sendEventsMode>") }
+    if (! done_once) { done_once = sub("<sendEventsMode>yes</sendEventsMode>", "<sendEventsMode>no</sendEventsMode>") }
+    print;
+}
+' ~/.config/labwc/rc.xml
 
 labwc --reconfigure 
 

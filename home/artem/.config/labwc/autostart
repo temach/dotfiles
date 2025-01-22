@@ -1,5 +1,8 @@
 # Example autostart file
 
+# start keyd only when labwc starts, to make sure that keyboard is never disabled at tty console login
+sudo /bin/systemctl restart keyd
+
 # background
 swaybg --mode fill --image ~/backgrounds/marnie006.jpg 2>&1 &
 

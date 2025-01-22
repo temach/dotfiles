@@ -13,7 +13,6 @@ bindkey -e
 alias ll="ls -la"
 alias hh="cat /home/artem/.zsh_history"
 alias f="find "
-alias j="z "
 alias vim="nvim "
 alias dotfiles="git --git-dir=/home/artem/dotfiles/.git --work-tree=/"
 alias k="kubectl "
@@ -23,6 +22,9 @@ alias rmmod_snd_sof_all="sudo rmmod snd_sof_pci_intel_mtl snd_sof_intel_hda_gene
 
 # before rsync run "sudo ncdu /" to find and exclude unnecessary large files
 alias rsync_arch_to_new_partition="sudo rsync -aAXHv --exclude='/dev/*' --exclude='/proc/*' --exclude='/sys/*' --exclude='/tmp/*' --exclude='/run/*' --exclude='/mnt/*' --exclude='/media/*' --exclude='/boot/*' --exclude='/lost+found/' --exclude='/var/lib/docker/overlay2/*' --exclude='/home/artem/axl*' --exclude='/home/artem/Downloads/*' --exclude='/var/cache/*' / /mnt"
+
+alias j="z"
+export _Z_CMD="j"
 
 export MOZ_ENABLE_WAYLAND=1
 export EDITOR="nvim"
@@ -41,10 +43,6 @@ export LIBSEAT_BACKEND=logind
 # the caps keyboard led will indicate keyboard layout
 export XKB_DEFAULT_LAYOUT=us,ru(mac)
 export XKB_DEFAULT_OPTIONS=grp:ctrl_space_toggle,grp_led:caps
-
-# autojump to frequent directories
-# see: https://github.com/rupa/z/blob/master/README
-source ~/.z-rupa-autojump.sh
 
 # Bind Up and Down arrows to prefix-based history search
 bindkey '^[[A' history-beginning-search-backward  # Up arrow
@@ -90,3 +88,6 @@ function update_prompt_with_git_branch() {
 }
 precmd_functions+=(update_prompt_with_git_branch)
 
+# autojump to frequent directories
+# see: https://github.com/rupa/z/blob/master/README
+source ~/.z-rupa-autojump.sh

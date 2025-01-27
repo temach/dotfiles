@@ -49,7 +49,7 @@ bindkey '^[[A' history-beginning-search-backward  # Up arrow
 bindkey '^[[B' history-beginning-search-forward   # Down arrow
 
 # case insensitive path-completion and highlight current menu entry
-autoload -Uz +X compinit && compinit
+autoload -U compinit; compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 

@@ -12,6 +12,7 @@
 
 profile {
   output eDP-1 {
+    disable
     scale 1.5 
     mode 3072x1920
     position 0,0

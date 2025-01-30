@@ -3,7 +3,7 @@ k9s:
   screenDumpDir: /home/artem/.local/state/k9s/screen-dumps
   refreshRate: 2
   maxConnRetry: 5
-  readOnly: false
+  readOnly: true
   noExitOnCtrlC: false
   ui:
     enableMouse: false
@@ -27,11 +27,11 @@ k9s:
       namespaces: []
       labels: {}
   logger:
-    tail: 100
-    buffer: 5000
+    tail: 1000
+    buffer: 7000
     sinceSeconds: -1
     textWrap: false
-    showTime: false
+    showTime: true
   thresholds:
     cpu:
       critical: 90

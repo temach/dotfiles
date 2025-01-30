@@ -1,0 +1,6 @@
+views:
+  v1/nodes:
+    sortColumn: AGE
+    columns:
+      - AGE
+      - NAME

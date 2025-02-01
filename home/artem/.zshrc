@@ -80,11 +80,21 @@ preexec_functions+=(set_terminal_tab_title)
 # show git branch in prompt
 function update_prompt_with_git_branch() {
     local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-    if [[ -n "$branch" ]]; then
-        PROMPT="%F{cyan}%~ (%F{green}$branch%F{cyan})%f\$ "
+    local venv=$VIRTUAL_ENV
+
+    if [[ -n "$venv" ]]; then
+        local myvenv=" (%F{yellow}$venv%F{cyan})"
     else
-        PROMPT="%F{cyan}%~%f\$ "
+        local myvenv=""
     fi
+
+    if [[ -n "$branch" ]]; then
+        local mybranch=" (%F{green}$branch%F{cyan})"
+    else
+        local mybranch=""
+    fi
+
+    PROMPT="%F{cyan}%~$myvenv$mybranch%f\$ "
 }
 precmd_functions+=(update_prompt_with_git_branch)
 

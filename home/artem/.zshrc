@@ -3,6 +3,7 @@
 # bluetoothctl power on
 # bluetoothctl connect FF:1F:54:58:E0:F7 ORBIT BT5.0
 # bluetoothctl connect 94:FB:A7:30:31:5A HyperX Cloud Buds
+# bluetoothctl connect B8:F6:53:9C:F8:DA JBL Flip 5
 #
 # to make bluetooth work with windows and linux see: https://wiki.archlinux.org/title/Bluetooth#Dual_boot_pairing
 
@@ -10,8 +11,9 @@
 # use CRTL-A and CTRL-E for jumping around shell cli
 bindkey -e
 
-alias ll="ls -la"
-alias hh="cat /home/artem/.zsh_history"
+alias ll="ls -la --color"
+# alias hh="cat /home/artem/.zsh_history"
+alias hh="history -i 0"
 alias f="find "
 alias vim="nvim "
 alias dotfiles="git --git-dir=/home/artem/dotfiles/.git --work-tree=/"

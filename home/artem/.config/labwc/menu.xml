@@ -76,8 +76,8 @@
   </item>
 
 
-  <item label="Poweroff">
-    <action name="Execute" command="systemctl -i poweroff" />
+  <item label="Suspend">
+    <action name="Execute" command="systemctl suspend" />
   </item>
 </menu>
 

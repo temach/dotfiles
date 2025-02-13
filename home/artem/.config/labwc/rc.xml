@@ -7,6 +7,8 @@
 
 <labwc_config>
 
+  <desktops number="3" />
+
   <keyboard>
     <default />
     <!-- 
@@ -61,15 +63,30 @@
       <action name="Execute" command="terminator --new-tab" />
     </keybind>
 
+    <!-- launch bluetooth manager -->
+    <keybind key="A-b">
+      <action name="Execute" command="blueman-manager" />
+    </keybind>
+
     <!-- launch clipboard history -->
     <keybind key="A-h">
       <action name="Execute" command="sh -c 'cliphist list | fuzzel --dmenu | cliphist decode | wl-copy'" />
     </keybind>
 
     <!-- launch screenshot -->
-    <keybind key="A-s">
+    <keybind key="A-f">
       <action name="Execute" command="sh -c 'slurp | grim -g - - | swappy -f -'" />
     </keybind>
+
+    <!-- Go to workspace -->
+    <keybind key="A-C-a"> <action name="GoToDesktop" to="1" /> </keybind>
+    <keybind key="A-C-s"> <action name="GoToDesktop" to="2" /> </keybind>
+    <keybind key="A-C-x"> <action name="GoToDesktop" to="3" /> </keybind>
+
+    <!-- Steal (send and go) to workspace -->
+    <keybind key="A-S-a"> <action name="SendToDesktop" to="1" /> </keybind>
+    <keybind key="A-S-s"> <action name="SendToDesktop" to="2" /> </keybind>
+    <keybind key="A-S-x"> <action name="SendToDesktop" to="3" /> </keybind>
 
   </keyboard>
 

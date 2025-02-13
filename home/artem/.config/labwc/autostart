@@ -21,10 +21,14 @@ kanshi >/dev/null 2>&1 &
 # Launch a panel such as yambar or waybar.
 waybar >/dev/null 2>&1 &
 
+# run bluetooth manager applet AFTER starting waybar
+sleep 1
+blueman-applet 2>&1 &
+
 # Enable notifications. Typically GNOME/KDE application notifications go
 # through the org.freedesktop.Notifications D-Bus API and require a client such
 # as mako to function correctly. Thunderbird is an example of this.
-mako >/dev/null 2>&1 &
+# mako >/dev/null 2>&1 &
 
 # Lock screen after 5 minutes; turn off display after another 5 minutes.
 #
@@ -33,8 +37,8 @@ mako >/dev/null 2>&1 &
 # `wlr-randr --output <whatever> --off` because this re-arranges views
 # (since a837fef). Instead use a wlr-output-power-management client such as
 # https://git.sr.ht/~leon_plickat/wlopm
-swayidle -w \
-	timeout 300 'swaylock -f -c 000000' \
-	timeout 600 'wlopm --off \*' \
-	resume 'wlopm --on \*' \
-	before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &
+# swayidle -w \
+# 	timeout 300 'swaylock -f -c 000000' \
+# 	timeout 600 'wlopm --off \*' \
+# 	resume 'wlopm --on \*' \
+# 	before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &

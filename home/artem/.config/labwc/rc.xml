@@ -83,6 +83,11 @@
     <keybind key="A-C-s"> <action name="GoToDesktop" to="2" /> </keybind>
     <keybind key="A-C-x"> <action name="GoToDesktop" to="3" /> </keybind>
 
+    <!-- Send to workspace -->
+    <keybind key="A-W-a"> <action name="SendToDesktop" to="1" follow="no" /> </keybind>
+    <keybind key="A-W-s"> <action name="SendToDesktop" to="2" follow="no" /> </keybind>
+    <keybind key="A-W-x"> <action name="SendToDesktop" to="3" follow="no" /> </keybind>
+
     <!-- Steal (send and go) to workspace -->
     <keybind key="A-S-a"> <action name="SendToDesktop" to="1" /> </keybind>
     <keybind key="A-S-s"> <action name="SendToDesktop" to="2" /> </keybind>

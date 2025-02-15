@@ -32,7 +32,13 @@ alias rsync_arch_to_new_partition="sudo rsync -aAXHv --exclude='/dev/*' --exclud
 alias j="z"
 export _Z_CMD="j"
 
+
+# see: https://github.com/I60R/page
+export PAGER="page -WfC -q 90000 -z 90000"
+export MANPAGER="page -t man"
+
 export MOZ_ENABLE_WAYLAND=1
+export VISUAL="nvim"
 export EDITOR="nvim"
 export TERMINAL="terminator"
 export ELECTRON_OZONE_PLATFORM_HINT="wayland"

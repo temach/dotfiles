@@ -58,9 +58,10 @@
       <action name="Execute" command="fuzzel" />
     </keybind>
 
-    <!-- launch terminator tab/window -->
+    <!-- launch terminal tab/window -->
     <keybind key="A-t">
-      <action name="Execute" command="terminator --new-tab" />
+      <!-- see: https://sw.kovidgoyal.net/kitty/remote-control/ -->
+      <action name="Execute" command="~/.config/labwc/kitty-global-launcher.sh" />
     </keybind>
 
     <!-- launch bluetooth manager -->
@@ -79,19 +80,43 @@
     </keybind>
 
     <!-- Go to workspace -->
-    <keybind key="A-C-a"> <action name="GoToDesktop" to="1" /> </keybind>
-    <keybind key="A-C-s"> <action name="GoToDesktop" to="2" /> </keybind>
-    <keybind key="A-C-x"> <action name="GoToDesktop" to="3" /> </keybind>
-
-    <!-- Send to workspace -->
-    <keybind key="A-W-a"> <action name="SendToDesktop" to="1" follow="no" /> </keybind>
-    <keybind key="A-W-s"> <action name="SendToDesktop" to="2" follow="no" /> </keybind>
-    <keybind key="A-W-x"> <action name="SendToDesktop" to="3" follow="no" /> </keybind>
+    <keybind key="A-C-a">
+      <action name="GoToDesktop" to="1" />
+      <action name="Execute" command="sh -c 'echo 1 > /tmp/labwc-current-workspace'" />
+    </keybind>
+    <keybind key="A-C-s">
+      <action name="GoToDesktop" to="2" />
+      <action name="Execute" command="sh -c 'echo 2 > /tmp/labwc-current-workspace'" />
+    </keybind>
+    <keybind key="A-C-x">
+      <action name="GoToDesktop" to="3" />
+      <action name="Execute" command="sh -c 'echo 3 > /tmp/labwc-current-workspace'" />
+    </keybind>
 
     <!-- Steal (send and go) to workspace -->
-    <keybind key="A-S-a"> <action name="SendToDesktop" to="1" /> </keybind>
-    <keybind key="A-S-s"> <action name="SendToDesktop" to="2" /> </keybind>
-    <keybind key="A-S-x"> <action name="SendToDesktop" to="3" /> </keybind>
+    <keybind key="A-S-a">
+      <action name="SendToDesktop" to="1" />
+      <action name="Execute" command="sh -c 'echo 1 > /tmp/labwc-current-workspace'" />
+    </keybind>
+    <keybind key="A-S-s">
+      <action name="SendToDesktop" to="2" />
+      <action name="Execute" command="sh -c 'echo 2 > /tmp/labwc-current-workspace'" />
+    </keybind>
+    <keybind key="A-S-x">
+      <action name="SendToDesktop" to="3" />
+      <action name="Execute" command="sh -c 'echo 3 > /tmp/labwc-current-workspace'" />
+    </keybind>
+
+    <!-- Send to workspace -->
+    <keybind key="A-W-a">
+      <action name="SendToDesktop" to="1" follow="no" />
+    </keybind>
+    <keybind key="A-W-s">
+      <action name="SendToDesktop" to="2" follow="no" />
+    </keybind>
+    <keybind key="A-W-x">
+      <action name="SendToDesktop" to="3" follow="no" />
+    </keybind>
 
   </keyboard>
 

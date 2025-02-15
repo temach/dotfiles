@@ -1,0 +1,29 @@
+[user]
+	email = tematibr@gmail.com
+	name = temach
+[alias]
+	br = branch --all --verbose
+	st = status
+	l = log --graph --decorate --all
+	d = diff --cached
+	rstatus = "!find . -name .git -type d -execdir pwd \\; -execdir git status -s \\;"
+	rpull = "!find . -name .git -type d -execdir pwd \\; -execdir git pull \\;"
+	rfetch = "!find . -name .git -type d -execdir pwd \\; -execdir git fetch \\;"
+	rdiff = "!find . -name .git -type d -execdir pwd \\; -execdir git diff \\;"
+
+[pull]
+	ff = only
+
+[core]
+	# see: https://github.com/I60R/page
+	pager = page
+
+[includeIf "gitdir:~/axlebolt/**"]
+  path = ~/axlebolt/.gitconfig
+
+[includeIf "gitdir:~/moonspeak/**"]
+  path = ~/moonspeak/.gitconfig
+
+# used to diff .min.js files, etc
+[diff "sha1sum"]
+	command = sha1sum

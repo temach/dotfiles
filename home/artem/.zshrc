@@ -11,6 +11,10 @@
 # use CRTL-A and CTRL-E for jumping around shell cli
 bindkey -e
 
+# see: https://sw.kovidgoyal.net/kitty/faq/#i-get-errors-about-the-terminal-being-unknown-or-opening-the-terminal-failing-or-functional-keys-like-arrow-keys-don-t-work
+alias kitty_ssh="kitten ssh"
+alias kitty_keys="kitten show-key -m kitty"
+
 alias ll="ls -la --color"
 # alias hh="cat /home/artem/.zsh_history"
 alias hh="history -i 0"
@@ -70,6 +74,10 @@ setopt HIST_IGNORE_SPACE        # If command starts with space do not add to his
 setopt HIST_IGNORE_DUPS         # Do not save consecutive duplicate commands
 
 setopt AUTO_CD                  # change to directory if its name matches and is not a command
+
+
+# With kitty must set "shell_integration disabled" before experimenting, else can face hard-to-debug shit
+# see: https://sw.kovidgoyal.net/kitty/shell-integration/#how-it-works
 
 # set title of compatiable terminals
 function set_terminal_tab_title() {

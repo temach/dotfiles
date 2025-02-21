@@ -2,6 +2,14 @@ set nocompatible
 set enc=utf-8
 set fileencoding=utf-8
 
+" copy to system clipboard and back without "+
+" any yank also goes to system clipboard, but deletes do NOT
+" using (set clipboard=unnamedplus) also deletes into system clipboard
+autocmd TextYankPost * if v:event.operator is# 'y'
+  \ | call system('wl-copy', @")
+  \ | endif
+
+
 " Disable documentation look up with Shift + K
 map <S-k> <Nop>
 

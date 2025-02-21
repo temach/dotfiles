@@ -10,4 +10,4 @@ echo $unique_title
 wlrctl window focus title:$unique_title || kitty --title $unique_title --detach --directory="~" -o allow_remote_control=socket-only --listen-on unix:/tmp/$unique_title
 
 # make a new tab
-kitten @ launch --type=tab --to unix:/tmp/$unique_title
+kitten @ launch --type=tab --cwd=current --location=after --to unix:/tmp/$unique_title

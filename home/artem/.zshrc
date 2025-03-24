@@ -34,8 +34,11 @@ export _Z_CMD="j"
 
 
 # see: https://github.com/I60R/page
-export PAGER="page -WfC -q 90000 -z 90000"
-export MANPAGER="page -t man"
+# export PAGER="page -WfC -q 90000 -z 90000"
+# export MANPAGER="page -t man"
+export PAGER="cat"
+export MANPAGER="cat"
+export SYSTEMD_PAGER="cat"
 
 export MOZ_ENABLE_WAYLAND=1
 export VISUAL="nvim"

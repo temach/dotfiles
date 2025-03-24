@@ -29,13 +29,21 @@
       <action name="Execute" command="brightnessctl --exponent set 7%-" />
     </keybind>
 
-    <!-- adjust volume with wpctl not amixer -->
+    <!-- adjust volume with wpctl not amixer, small step when SHIFT held -->
+    <keybind key="S-XF86_AudioLowerVolume">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-" />
+    </keybind>
+    <keybind key="S-XF86_AudioRaiseVolume">
+      <action name="Execute" command="wpctl set-volume --limit 2.0 @DEFAULT_AUDIO_SINK@ 2%+" />
+    </keybind>
+    <!-- adjust volume with wpctl not amixer, normally large step -->
     <keybind key="XF86_AudioLowerVolume">
       <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-" />
     </keybind>
     <keybind key="XF86_AudioRaiseVolume">
       <action name="Execute" command="wpctl set-volume --limit 2.0 @DEFAULT_AUDIO_SINK@ 10%+" />
     </keybind>
+    <!-- adjust volume with wpctl not amixer -->
     <keybind key="XF86_AudioMute">
       <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" />
     </keybind>

@@ -63,6 +63,10 @@ export XKB_DEFAULT_OPTIONS=grp:ctrl_space_toggle,grp_led:caps
 bindkey '^[[A' history-beginning-search-backward  # Up arrow
 bindkey '^[[B' history-beginning-search-forward   # Down arrow
 
+# instead of Alt+f and Alt+b, use Ctrl+LeftArrow and Ctrl+RightArrow to jump words
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # case insensitive path-completion and highlight current menu entry
 autoload -U compinit; compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'

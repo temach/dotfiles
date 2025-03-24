@@ -15,8 +15,8 @@
 	ff = only
 
 [core]
-	# see: https://github.com/I60R/page
-	pager = page
+	# alternative: https://github.com/I60R/page
+	pager = cat
 
 [includeIf "gitdir:~/axlebolt/**"]
   path = ~/axlebolt/.gitconfig

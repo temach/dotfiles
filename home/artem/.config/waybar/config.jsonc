@@ -24,25 +24,11 @@
        "memory",
        "temperature",
        "backlight",
-       "keyboard-state",
-       "sway/language",
        "battery",
        "clock",
        "tray",
        "custom/power"
     ],
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
@@ -89,8 +75,8 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%Y-%m-%d   %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -111,7 +97,7 @@
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["░", "▒", "▓", "█"],
-	"tooltip": "Screen brightness"
+	      "tooltip": "Screen brightness"
     },
     "battery": {
         "states": {

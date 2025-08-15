@@ -9,6 +9,10 @@
 # to make bluetooth work with windows and linux see: https://wiki.archlinux.org/title/Bluetooth#Dual_boot_pairing
 
 
+# init node version manager
+source /usr/share/nvm/init-nvm.sh
+
+
 # use CRTL-A and CTRL-E for jumping around shell cli
 bindkey -e
 
@@ -23,6 +27,7 @@ alias f="find "
 alias vim="nvim "
 alias dotfiles="git --git-dir=/home/artem/dotfiles/.git --work-tree=/"
 alias k="kubectl "
+alias kgetall="kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl -v=6 get --show-kind --ignore-not-found -n "
 alias g="git "
 alias gt="git st"
 alias gm="git commit -m "

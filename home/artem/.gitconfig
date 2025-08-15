@@ -10,6 +10,7 @@
 	rpull = "!find . -name .git -type d -execdir pwd \\; -execdir git pull \\;"
 	rfetch = "!find . -name .git -type d -execdir pwd \\; -execdir git fetch \\;"
 	rdiff = "!find . -name .git -type d -execdir pwd \\; -execdir git diff \\;"
+	rst = "!find . -name .git -type d -execdir pwd \\; -execdir git st \\;"
 
 [pull]
 	ff = only

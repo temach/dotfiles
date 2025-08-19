@@ -20,19 +20,21 @@ bindkey -e
 alias kitty_ssh="kitten ssh"
 alias kitty_keys="kitten show-key -m kitty"
 
+# be aware of magic space after alias, see: https://stackoverflow.com/questions/71920035/zsh-alias-completion-trailing-space-breaks-with-functions
+
 alias ll="ls -la --color"
 # alias hh="cat /home/artem/.zsh_history"
 alias hh="history -i 0"
-alias f="find "
-alias vim="nvim "
+alias f="find"
+alias vim="nvim"
 alias dotfiles="git --git-dir=/home/artem/dotfiles/.git --work-tree=/"
-alias k="kubectl "
-alias kgetall="kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl -v=6 get --show-kind --ignore-not-found -n "
+alias k="kubectl"
+alias kgetall="kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl -v=6 get --show-kind --ignore-not-found -n"
 alias d="docker"
 alias g="git"
 alias gt="git st"
 alias gm="git commit -m"
-alias sps="sops --keyservice tcp://127.0.0.1:5000 "
+alias sps="sops --keyservice tcp://127.0.0.1:5000"
 
 alias rmmod_snd_sof_all="sudo rmmod snd_sof_pci_intel_mtl snd_sof_intel_hda_generic snd_sof_intel_hda_common snd_sof_pci snd_sof_intel_hda snd_sof snd_sof_utils snd_soc_hdac_hda snd_soc_dmic snd_sof soundwire_intel snd_sof_intel_hda_mlink snd_sof_xtensa_dsp snd_hda_ext_core" 
 

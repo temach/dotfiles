@@ -76,7 +76,14 @@
     "clock": {
         // "timezone": "America/New_York",
         "format": "{:%Y-%m-%d   %H:%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip-format": "<big>UTC\nAlmaty\nSeoul-Sapporo-Tokyo</big>\n<big>{tz_list}</big>\n<tt><big>{calendar}</big></tt>",
+        "timezones": [
+            // place almaty first, but keep ordered
+            "Etc/GMT-5",
+            "Etc/UTC",
+            "Etc/GMT-5",
+            "Etc/GMT-9"
+        ]
     },
     "cpu": {
         "format": "{usage}% ",

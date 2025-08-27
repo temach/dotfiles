@@ -61,6 +61,9 @@ export GDK_BACKEND=wayland
 export PATH="$PATH:/home/artem/.local/bin"
 export LIBSEAT_BACKEND=logind
 
+# docker always use plain progress
+esport BUILDKIT_PROGRESS=plain
+
 # To find your country code is, refer to the layout section of:
 # /usr/share/X11/xkb/rules/evdev.lst
 # If a variant layout is needed, the syntax is layout(variant)

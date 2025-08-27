@@ -62,7 +62,7 @@ export PATH="$PATH:/home/artem/.local/bin"
 export LIBSEAT_BACKEND=logind
 
 # docker always use plain progress
-esport BUILDKIT_PROGRESS=plain
+export BUILDKIT_PROGRESS=plain
 
 # To find your country code is, refer to the layout section of:
 # /usr/share/X11/xkb/rules/evdev.lst

@@ -9,6 +9,28 @@
 #   Make: Lenovo Group Limited
 #   Model: 0x8AB1
 #   Serial: (null)
+#
+# DP-3 "Nreal One (DP-3)"
+#   Make: Nreal
+#   Model: One
+#   Serial: (null)
+
+profile {
+  output eDP-1 {
+    disable
+    # enable
+    scale 1.0 
+    mode 3072x1920
+    position 0,0
+  }
+  # xreal one glasses
+  output DP-1 {
+    enable
+    scale 1.0
+    mode 1920x1080
+    position 0,0
+  }
+}
 
 profile {
   output eDP-1 {

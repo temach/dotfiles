@@ -5,6 +5,7 @@
 # bluetoothctl connect 12:34:10:29:1A:40 ORBIT BT3.0
 # bluetoothctl connect 94:FB:A7:30:31:5A HyperX Cloud Buds (win is paired, chntpw: \ControlSet001\Services\BTHPORT\Parameters\Keys\683421c7a5af> cat 94fba730315a)
 # bluetoothctl connect B8:F6:53:9C:F8:DA JBL Flip 5
+# bluetoothctl connect DC:AB:CD:50:0A:00 Digio2 BT5.0 Tball (only linux is paired)
 #
 # to make bluetooth work with windows and linux see: https://wiki.archlinux.org/title/Bluetooth#Dual_boot_pairing
 

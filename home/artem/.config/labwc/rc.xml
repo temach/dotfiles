@@ -133,12 +133,28 @@
     <default />
 
     <context name="Frame">
+      <!-- resize and drag windows when keyboard hotkey is pressed -->
       <mousebind button="A-Left" action="Drag">
         <action name="Move" />
       </mousebind>
       <mousebind button="A-S-Left" action="Drag">
         <action name="Resize" />
       </mousebind>
+
+      <!-- trackball/mouse both extra buttons act as scroll wheel when mouse key is pressed -->
+      <mousebind button="Extra" action="Press">
+        <action name="EnableScrollWheelEmulation"/>
+      </mousebind>
+      <mousebind button="Extra" action="Release">
+        <action name="DisableScrollWheelEmulation"/>
+      </mousebind>
+      <mousebind button="Side" action="Press">
+        <action name="EnableScrollWheelEmulation"/>
+      </mousebind>
+      <mousebind button="Side" action="Release">
+        <action name="DisableScrollWheelEmulation"/>
+      </mousebind>
+
     </context>
 
   </mouse>

@@ -13,6 +13,15 @@
 # init node version manager
 source /usr/share/nvm/init-nvm.sh
 
+if [ -d /home/artem ]; then
+    # commands for laptop
+    source /usr/share/nvm/init-nvm.sh
+
+elif [ -d /data/data/com.termux ]; then
+    # commands for termux
+    alias p="termux-clipboard-get | vim"
+    alias passphrase="ssh-keygen -p"
+fi
 
 # use CRTL-A and CTRL-E for jumping around shell cli
 bindkey -e

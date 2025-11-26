@@ -10,11 +10,10 @@
 # to make bluetooth work with windows and linux see: https://wiki.archlinux.org/title/Bluetooth#Dual_boot_pairing
 
 
-# init node version manager
-source /usr/share/nvm/init-nvm.sh
-
 if [ -d /home/artem ]; then
     # commands for laptop
+
+    # init node version manager
     source /usr/share/nvm/init-nvm.sh
 
 elif [ -d /data/data/com.termux ]; then
